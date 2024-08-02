@@ -6,8 +6,8 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   //templateUrl: './app.component.html',
-  template:`<app-user />`,
-
+  template:
+  `Hello  {{ city }}, {{ 1 + 1 }}`,
   //styleUrl: './app.component.css'
   styles: `
     :host {
