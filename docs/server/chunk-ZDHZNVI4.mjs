@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{a as t,b as r,c as n,h as p,k as i,m,n as a,q as f,u as s,x as c}from"./chunk-SPD2FITC.mjs";var d=(()=>{class o{title="heymann-mark.github.io";static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-root"]],standalone:!0,features:[n],decls:1,vars:0,template:function(e,y){e&1&&r(0,"router-outlet")},dependencies:[s]})}return o})();var u=[];var l={providers:[p({eventCoalescing:!0}),c(u),a()]};var C={providers:[f()]},g=i(l,C);var x=()=>m(d,g),z=x;export{z as a};
