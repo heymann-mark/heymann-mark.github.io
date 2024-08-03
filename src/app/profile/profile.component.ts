@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../header/header/header.component';
-import { IntroComponent } from '../intro/intro/intro.component';
-import { AboutComponent } from '../about/about/about.component';
-import { ContactComponent } from '../contact/contact/contact.component';
-import { EducationComponent } from '../education/education/education.component';
-import { ExperienceComponent } from '../experience/experience/experience.component';
-import { ProjectsComponent } from '../projects/projects/projects.component';
+import { HeaderComponent } from './header/header.component';
+import { IntroComponent } from './intro/intro.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @Component({
   selector: 'app-profile',
