@@ -1,2 +1,2 @@
-This command, run on my local gh-pages branch, made the branch viewable on github pages
+This command, run from local dev branch, made the branch viewable on github pages
 $ ng deploy --repo=https://github.com/heymann-mark/heymann-mark.github.io.git --name="heymann-mark"   
