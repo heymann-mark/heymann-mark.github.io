@@ -1,3 +1,8 @@
+1) Make  change to dev locally
+2) Commit locally
+3) Sync changes
+4) From the local dev branch run: ng deploy --repo=https://github.com/heymann-mark/heymann-mark.github.io.git --name="heymann-mark"
+5) Changes will appear at heymann-mark.giithub.io
 # HeymannMarkGithubIo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
