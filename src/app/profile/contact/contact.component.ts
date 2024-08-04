@@ -1,7 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent implements OnInit{
-  constructor(){}
+  constructor(private http: HttpClient){}
 
   ngOnInit(): void {
     //throw new Error('Method not implemented.');
@@ -27,12 +26,12 @@ export class ContactComponent implements OnInit{
   //and they are sending it to me via email
   onSubmit(name:any, subject:any, email:any, message:any) {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    //this.http.post('https://formspree.io/f/mqkwykjg',
-   //    { name: name, subject: subject, replyto: email, message: message },
-    //   { 'headers': headers }).subscribe(
-     //     response => {
-      //    console.log(response);
-      //   }
-      // );
+    this.http.post('https://formspree.io/f/mqkwykjg',
+       { name: name, subject: subject, replyto: email, message: message },
+       { 'headers': headers }).subscribe(
+          response => {
+          console.log(response);
+        }
+       );
  }
 }
