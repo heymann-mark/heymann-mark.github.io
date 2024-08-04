@@ -1,15 +1,27 @@
-<!--this is the index.html file for the gh pages-->
-Helloo World
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Heymann Mark Github Io</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js'></script>
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="./assets/css/nowui.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
 <body>
-  <app-root></app-root>
+  <div ng-app="MyApp">
+    <div ng-controller="MyCtrl">
+      <app-root></app-root>
+    </div>
+  </div>
 </body>
+<link rel="stylesheet" href="./assets/aos-master/dist/aos.css" />
+  <script src="./assets/aos-master/dist/aos.js"></script>
+  <script src="./assets/js/main.js"></script>
 </html>
