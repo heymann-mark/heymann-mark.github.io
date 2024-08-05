@@ -1,12 +1,5 @@
 /*child element*/
 .form-control{
-  /*width: 100px;
- // height: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -5px 0 0 -5px;
-  padding: 100px;*/
   border-right: 1px #E3E3E3;
   border-left: 1px #E3E3E3;
   border-style: none solid;
@@ -17,7 +10,7 @@
 /*parent element of text box*/
 .input-group{
   border: 1px #E3E3E3;
-   border-style: none solid;
+  border-style: none solid;
   border-radius: 10px;
 }
 /*parent element of other boxes*/
