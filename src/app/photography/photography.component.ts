@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-photography',
   standalone: true,
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './photography.component.css'
 })
 export class PhotographyComponent {
-
+  constructor(private route : ActivatedRoute){}
 }
