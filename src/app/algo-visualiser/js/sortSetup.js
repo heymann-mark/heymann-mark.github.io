@@ -4,7 +4,7 @@ var arraylength = document.getElementById("quantityRange").value;
 var end = arraylength - 1;
 var partitionIndex = arraylength - 1
 //set speed
-var speed = 0;
+var speed = 500;
 var sorted = 0;
 //set is running
 var htmlElements = "";
@@ -12,8 +12,7 @@ var begin  = 0
 var squares
 var dividers
 var resetOn = 0
-var isRunning = 0
-var isSwapping = false;
+var isRunning = false;
 function sortSetup(){
   swaps=0
   document.getElementById('swapVal').innerHTML = 0;
@@ -41,5 +40,5 @@ var n;
 for(n = 0; n < arraylength; n++){
   unsortedArray[n] = Math.floor(Math.random()*100);
 }
-unsortedArray.length  =arraylength
+unsortedArray.length = arraylength
 }

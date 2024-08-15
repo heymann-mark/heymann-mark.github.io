@@ -65,7 +65,7 @@ async function mergeArray(lz, rz){
 }
 let T=3;
 async function mergedraw(){
-  if(resetOn===1&&isRunning===1)
+  if(resetOn===1&&isRunning)
   return;
   var j = 1;
   dividers.forEach(index =>{
@@ -78,7 +78,7 @@ async function mergedraw(){
     if(isRunning===1){
       squares[left].style.backgroundColor = 'red'
       squares[right].style.backgroundColor = 'green'}
-      squares[i - 1].style.backgroundColor = 'blue'
+      squares[i - 1].style.backgroundColor = '#F1F3F4'
       squares[i - 1].style.height = .9*(index + 10) + 1 + '%'
       squares[i - 1].style.width = T*100/(1+(T+1)*arraylength) + '%'
       i++
@@ -89,14 +89,14 @@ async function mergedraw(){
 function resetmerge(){
   clearInterval(interval);
   resetOn = 1
-  isRunning = 0
+  isRunning = false;
   swaps=0
 }
 var fm = 0;
 async function finishedmergeDraw(){
   f=1;
   while(fm  < unsortedArray.length){
-    if(f===1  && resetOn === 0 &&isRunning===0)
+    if(f===1  && resetOn === 0 &&!isRunning)
       squares[fm].style.backgroundColor = '#41FF00'
     fm++
     await sleep(speed);

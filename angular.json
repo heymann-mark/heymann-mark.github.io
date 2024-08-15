@@ -16,31 +16,39 @@
             "outputPath": "dist/heymann-mark.github.io",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
-            ],
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
-
               },
               "src/favicon.ico",
-               "src/assets"
+              "src/assets"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/aos/dist/aos.css",
-              "src/styles.css"
+              "./node_modules/aos/dist/aos.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./node_modules/aos/dist/aos.js",
-              "src/assets/js/main.js"
+              "src/assets/js/main.js",
+
+
+              "src/app/algo-visualiser/js/merge.js",
+              "src/app/algo-visualiser/js/quick.js",
+              "src/app/algo-visualiser/js/astar.js",
+              "src/app/algo-visualiser/js/pathfinder.js",
+              "src/app/algo-visualiser/js/bubble.js",
+              "src/app/algo-visualiser/js/header.js",
+              "src/app/algo-visualiser/js/sortSetup.js",
+              "src/app/algo-visualiser/js/app.js"
+
+
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -108,9 +116,7 @@
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
-            "scripts": [
-
-            ]
+            "scripts": []
           }
         },
         "deploy": {

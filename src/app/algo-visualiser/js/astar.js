@@ -1,4 +1,4 @@
-var pq = new PriorityQueue();
+//var pq = new PriorityQueue();
 var previousVertex
 var dist
 var weightmaps
