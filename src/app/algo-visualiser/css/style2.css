@@ -33,13 +33,7 @@ body {
 
 
 */
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #535353;
-  color: #f1f3f4;
-  border-color: #f1f3f4;
-}
+
 
 @supports (-moz-appearance: none) {
   body {
@@ -83,17 +77,7 @@ h1 {
 
 */
 
-#display {
-  height: 100%;
 
-  background-color: #5F6368;
-  display: flex;
-
-  color: #f1f3f4;
-  font-style: italic;
-  letter-spacing: 1px;
-
-}
 .output {
   padding-right: 10px;
   width: 50px;
@@ -159,15 +143,7 @@ output {
 
 
 
-.slider-container {
-  display: inline-block;
 
-  /* whole thing*/
-  /*display: contents;*/
-  padding-right: 10px;
-
-  /* padding-left: 10px;*/
-}
 .form-label {
   padding-right: 10px;
 }
@@ -188,16 +164,55 @@ output {
   background-color:#000000;
 }
 .container-fluid{
-
+  display: contents;/*fixes right gap*/
 }
-
+.algo-container{
+  display: contents;/*fixes right gap*/
+  padding-top:100px;
+}
 #container {
+
   height:  100%;
   width: 100%;
-  justify-items: center;
+
   background-color: #535353;
   position:absolute;
   display: flex;
   flex-wrap:wrap-reverse;
 
+  padding-top:60px;
 }
+.navbar {
+  background-color: #535353;
+  color: #f1f3f4;
+  height:60px;
+  display: -webkit-inline-box;
+}
+
+#display {
+  height: 100%;
+  display: flex;
+  color: #f1f3f4;
+  font-style: italic;
+  letter-spacing: 1px;
+  padding-right:100px;
+  padding-top:5px;
+  padding-left:100px;
+}
+.slider-container {
+  display: inline-block;
+
+  /* whole thing*/
+  /*display: contents;*/
+  padding-right: 100px;
+
+  /* padding-left: 10px;*/
+}
+/*
+#5F6368
+#DEE1E6
+#F1F3F4
+#BABCBE
+#535353
+#202124
+*/
