@@ -14,7 +14,6 @@ var dividers;
 var resetOn = 0;
 var isRunning = false;
 var numberOfSCreens = 1;
-//var swaps=0
 function sortSetup(method) {
   htmlElements = "";
   htmlElements += '<div id = "display" '+
@@ -33,26 +32,16 @@ function sortSetup(method) {
   if (method === 1) htmlElements += "Quick Sort &nbsp &nbsp";
   if (method === 2) htmlElements += "Merge Sort &nbsp &nbsp";
 
-  //htmlElements += 'quantity:<output id="quantitySliderVal" class = "output">' + quantity + " </output>&nbsp &nbsp";
-
   htmlElements +=
     'array access:<output id="arrayAccessVal" class = "output"> 0  </output> &nbsp &nbsp';
   htmlElements +=
     'swaps:<output id="swapVal" class = "output"  [(ngModel)]="swaps"> 0 </output> &nbsp &nbsp';
-  //htmlElements += 'speed:<output id="speedSliderVal" class = "output">' + speed + " </output> &nbsp &nbsp";
 
-  //htmlElements += speed;
   htmlElements += '</div>';
-  //var display = document.getElementById("display");
-  //display.innerHTML = htmlElements;
-  console.log("in sort setup" + method);
-  //document.getElementById('swapVal').innerHTML = 0;
   arraylength = document.getElementById("quantityRange").value;
   end = arraylength - 1;
   partitionIndex = arraylength - 1;
-  //htmlElements = "";
-  //send speed to display quantity if slider is moved
-  //creates all the divs to display the lines
+
   htmlElements += '<div class="bline"> </div>';
   for (var i = 0; i < arraylength; i++) {
     htmlElements += '<div class="line"> </div>';

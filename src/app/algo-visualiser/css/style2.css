@@ -225,18 +225,7 @@ padding-top:21px;
 #202124
 */
 
-#display {
-  width: 1000px;
-  height:10px;
-  display:flex;
-  color: #f1f3f4;
-  font-style: italic;
-  background-color: #dd1010;
-  letter-spacing: 1px;
-  padding-top: 10px;
-  padding-left: 10px;
-  z-index:1;
-  }
+
 
   ::ng-deep .bg-dark {
     background-color: transparent;
