@@ -1,6 +1,6 @@
 var paused = false;
 function delaySliderChange(val) {
-  document.getElementById("speedSliderVal").innerHTML = val + "&nbsp";
+  //document.getElementById("speedSliderVal").innerHTML = val + "&nbsp";
   speed = val;
   if(isRunning){
     if (method === 0){
