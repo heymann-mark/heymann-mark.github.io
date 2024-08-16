@@ -21,10 +21,13 @@ function sortSetup(method) {
   'style = "'+
   'position:absolute;'+
   'z-index:1;'+
-  'width:350px;'+
+  'width:380px;'+
+  'height:30px;'+
   'float:right;'+
   'background-color:black;'+
   'color:white;'+
+  'overflow-x:hidden;'+
+  'overflow-y:hidden;'+
   '">';
   if (method === 0) htmlElements += "Bubble Sort &nbsp &nbsp";
   if (method === 1) htmlElements += "Quick Sort &nbsp &nbsp";
