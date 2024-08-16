@@ -8,27 +8,10 @@ var quantity = 100;
 async function chooseMethod(m) {
   if (document.getElementById("cellsize") !== null)
     cellsize = document.getElementById("cellsize").value;
-
   document.getElementById("startbutton").innerHTML = "Start";
-  htmlElements = "";
-  if (m === 0) htmlElements += "Bubble Sort &nbsp &nbsp";
-  if (m === 1) htmlElements += "Quick Sort &nbsp &nbsp";
-  if (m === 2) htmlElements += "Merge Sort &nbsp &nbsp";
-
-  //htmlElements += 'quantity:<output id="quantitySliderVal" class = "output">' + quantity + " </output>&nbsp &nbsp";
-
-  htmlElements += 'array access:<output id="arrayAccessVal" class = "output"> 0  </output> &nbsp &nbsp';
-  htmlElements += 'swaps:<output id="swapVal" class = "output"  [(ngModel)]="swaps"> 0 </output> &nbsp &nbsp';
-  //htmlElements += 'speed:<output id="speedSliderVal" class = "output">' + speed + " </output> &nbsp &nbsp";
-
-  //htmlElements += speed;
-  var display = document.getElementById("display");
-  display.innerHTML = htmlElements;
-
-
   clearInterval(interval);
   method = m;
-  if (method < 3) sortSetup();
+  if (method < 3) sortSetup(method);
   if (method === 0) {
     resetbubble();
     bubbledraw();

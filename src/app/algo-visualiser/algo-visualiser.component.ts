@@ -14,8 +14,6 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 export class AlgoVisualiserComponent {
   @Input() speed = 500;
   @Input() quantity = 100;
-  @Input() array_access = 0;
-  @Input() swaps = 0;
-  isCollapsed = true;
+
 
 }

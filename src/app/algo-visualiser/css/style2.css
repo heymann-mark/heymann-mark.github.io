@@ -184,8 +184,10 @@ output {
 }
 .navbar {
   background-color: #535353;
+  background-color: transparent;
+
   color: #f1f3f4;
-  height:60px;
+  height:55px;
   display: -webkit-inline-box;
 }
 
@@ -229,9 +231,13 @@ padding-top:21px;
   display:flex;
   color: #f1f3f4;
   font-style: italic;
-  background-color: 535353;
+  background-color: #dd1010;
   letter-spacing: 1px;
   padding-top: 10px;
   padding-left: 10px;
+  z-index:1;
   }
 
+  ::ng-deep .bg-dark {
+    background-color: transparent;
+  }
