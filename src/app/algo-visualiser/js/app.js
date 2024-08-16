@@ -4,7 +4,7 @@ var s2 = 0;
 interval = null;
 var cellsize = 14;
 var quantity = 100;
-console.log("running")
+
 async function chooseMethod(m) {
   if (document.getElementById("cellsize") !== null)
     cellsize = document.getElementById("cellsize").value;
@@ -15,15 +15,16 @@ async function chooseMethod(m) {
   if (m === 1) htmlElements += "Quick Sort &nbsp &nbsp";
   if (m === 2) htmlElements += "Merge Sort &nbsp &nbsp";
 
-  htmlElements += 'quantity:<output id="quantitySliderVal" class = "output">' + quantity + " </output>&nbsp &nbsp";
+  //htmlElements += 'quantity:<output id="quantitySliderVal" class = "output">' + quantity + " </output>&nbsp &nbsp";
 
   htmlElements += 'array access:<output id="arrayAccessVal" class = "output"> 0  </output> &nbsp &nbsp';
-  htmlElements += 'swaps:<output id="swapVal" class = "output"> 0 </output> &nbsp &nbsp';
-  htmlElements += 'speed:<output id="speedSliderVal" class = "output">' + speed + " </output> &nbsp &nbsp";
+  htmlElements += 'swaps:<output id="swapVal" class = "output"  [(ngModel)]="swaps"> 0 </output> &nbsp &nbsp';
+  //htmlElements += 'speed:<output id="speedSliderVal" class = "output">' + speed + " </output> &nbsp &nbsp";
 
   //htmlElements += speed;
   var display = document.getElementById("display");
   display.innerHTML = htmlElements;
+
 
   clearInterval(interval);
   method = m;

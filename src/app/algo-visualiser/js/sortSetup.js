@@ -13,9 +13,10 @@ var squares
 var dividers
 var resetOn = 0
 var isRunning = false;
+//var swaps=0
 function sortSetup(){
-  swaps=0
-  document.getElementById('swapVal').innerHTML = 0;
+console.log("in sort setup")
+  //document.getElementById('swapVal').innerHTML = 0;
   arraylength = document.getElementById("quantityRange").value;
   end = arraylength - 1;
   partitionIndex = arraylength - 1

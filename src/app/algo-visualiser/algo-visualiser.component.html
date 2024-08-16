@@ -3,7 +3,7 @@
 <div class="container-fluid">
 <div class = algo-container>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" color-on-scroll="400" >
-      <div id="display"></div>
+
       <div class="collapse navbar-collapse justify-content-end" id="navigation" >
         <ul class="navbar-nav" style = "float:left">
           <li class="nav-item" style = "float:left">
@@ -18,9 +18,11 @@
                 id="delayRange"
                 step="1"
                 oninput="delaySliderChange(this.value)"
-              />
 
-              <div class="slider-container"></div>
+                [(ngModel)]="speed"
+              />
+              <output class = "slider-output">{{speed}}</output></div>
+              <div class="slider-container">
               <label for="quantityRange" class="form-label">Quantity: </label>
               <input
                 type="range"
@@ -30,8 +32,13 @@
                 class="slider"
                 id="quantityRange"
                 step="1"
+                oninput="quantity = this.value"
+                [(ngModel)]="quantity"
                 oninput="quantitySliderChange(this.value)"
               />
+              <output
+              class = "quantity-slider-output"
+              >{{quantity}}</output>
             </div>
           </li>
 
@@ -100,7 +107,7 @@
         </ul>
         <div ngbDropdown class="dropdown" placement="bottom-right">
           <button class="btn btn-default dropdown-toggle" ngbDropdownToggle>
-            See more
+            More
           </button>
           <div ngbDropdownMenu>
             <a class="dropdown-item" href="./">Home</a>
@@ -119,7 +126,7 @@
           </div>
         </div>
       </div>
-
+      <div id = "display"></div>
 
     </nav>
 

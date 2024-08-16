@@ -65,7 +65,7 @@ function bubbledraw(){
   squares[i - 1].style.width = T*100/(1+(T+1)*arraylength) + '%'
     i++
   })
-  console.log(dividers)
+
   var j = 1;
   dividers.forEach(index =>{
   dividers[j - 1].style.backgroundColor = '#202124'

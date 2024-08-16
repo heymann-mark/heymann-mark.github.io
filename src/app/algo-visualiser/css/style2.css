@@ -134,7 +134,7 @@ output {
     height: 100px;
     cursor: ew-resize;
     z-index: -10;
-    background-color: #000000;
+    background-color: #00c3ff;
 
     padding-top: 20px;
     /*box-shadow: -80px 0 0 80px #202124;*/
@@ -189,25 +189,31 @@ output {
   display: -webkit-inline-box;
 }
 
-#display {
-  height: 100%;
-  display: flex;
-  color: #f1f3f4;
-  font-style: italic;
-  letter-spacing: 1px;
-  padding-right:100px;
-  padding-top:5px;
-  padding-left:100px;
-}
-.slider-container {
-  display: inline-block;
 
-  /* whole thing*/
-  /*display: contents;*/
-  padding-right: 100px;
+.slider-container {
+  display: -webkit-inline-flex;
+margin-right: 50px;
+
+
 
   /* padding-left: 10px;*/
 }
+.slider-container > .form-label {/*words speed and quantity, the labels*/
+padding-top:21px;
+}
+.slider-container > .slider {/*sliders*/
+  margin-top:29px;
+  height:10px;
+
+  }
+  .slider-container > .slider-output {/*the number for speed*/
+    padding-top:22px;
+    padding-right:10px;
+    }
+    .slider-container > .quantity-slider-output {
+      padding-top:22px;
+      padding-right:10px;
+      }
 /*
 #5F6368
 #DEE1E6
@@ -216,3 +222,16 @@ output {
 #535353
 #202124
 */
+
+#display {
+  width: 1000px;
+  height:10px;
+  display:flex;
+  color: #f1f3f4;
+  font-style: italic;
+  background-color: 535353;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-left: 10px;
+  }
+

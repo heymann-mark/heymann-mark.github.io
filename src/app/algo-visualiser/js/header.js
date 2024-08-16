@@ -10,7 +10,8 @@ function delaySliderChange(val) {
   }
 }
 function quantitySliderChange(val) {
-  document.getElementById("quantitySliderVal").innerHTML = val + "&nbsp";
+  console.log("quantitySliderChange............");
+  //document.getElementById("quantitySliderVal").innerHTML = val + "&nbsp";
   quantity = val;
   reset();
 }
