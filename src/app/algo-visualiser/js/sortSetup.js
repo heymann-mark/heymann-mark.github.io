@@ -7,7 +7,7 @@ var partitionIndex = arraylength - 1;
 var speed = 500;
 var sorted = 0;
 //set is running
-var htmlElements = "";
+//var htmlElements = "";
 var begin = 0;
 var squares;
 var dividers;
@@ -16,6 +16,7 @@ var isRunning = false;
 var numberOfSCreens = 1;
 function sortSetup(method) {
   htmlElements = "";
+
   htmlElements += '<div id = "display" '+
   'style = "'+
   'position:absolute;'+
@@ -38,6 +39,7 @@ function sortSetup(method) {
     'swaps:<output id="swapVal" class = "output"  [(ngModel)]="swaps"> 0 </output> &nbsp &nbsp';
 
   htmlElements += '</div>';
+
   arraylength = document.getElementById("quantityRange").value;
   end = arraylength - 1;
   partitionIndex = arraylength - 1;
