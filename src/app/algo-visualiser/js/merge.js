@@ -3,7 +3,7 @@ visited = []
 var l = 0
 var r
 var left = 0
-var right = document.getElementById("quantityRange").value - 1;
+//var right = document.getElementById("quantityRange").value - 1;
 async function mergeSort(l, r){
   if(resetOn === 1)
   return;

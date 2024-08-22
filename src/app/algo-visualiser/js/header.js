@@ -1,6 +1,7 @@
+
 var paused = false;
 function delaySliderChange(val) {
-  //document.getElementById("speedSliderVal").innerHTML = val + "&nbsp";
+  document.getElementById("delayRange").innerHTML = val + "&nbsp";
   speed = val;
   if(isRunning){
     if (method === 0){
@@ -10,8 +11,6 @@ function delaySliderChange(val) {
   }
 }
 function quantitySliderChange(val) {
-  console.log("quantitySliderChange............");
-  //document.getElementById("quantitySliderVal").innerHTML = val + "&nbsp";
   quantity = val;
   reset();
 }
@@ -60,10 +59,10 @@ async function start() {
         //pauseQuick()
         //await quickSort(0, arraylength - 1);
           //speed = 1010-document.getElementById("delayRange").value
-         // console.log("unpause?  " + speed);
+
           //await quickSort(0, arraylength - 1);
           speed = 1010 - document.getElementById("delayRange").value;
-          console.log("unpause?  " + speed);
+
         }
       //if (method === 2) interval = setInterval("bubbleSort()", speed);
       paused = false;
@@ -71,7 +70,7 @@ async function start() {
       if (method === 0)
          clearInterval(interval);//this does the pausing for bubble sort
       if (method === 1){
-        console.log("pause?");
+
          speed  = 1000;
       }
       document.getElementById("startbutton").innerHTML = "Start";
@@ -79,5 +78,6 @@ async function start() {
     }
   }
 }
+
 
 

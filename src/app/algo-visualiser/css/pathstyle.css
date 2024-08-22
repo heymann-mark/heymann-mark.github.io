@@ -1,5 +1,6 @@
 .grid {
-  
+
+/*
   background-color: black;
   display: inline-flex;
   flex-wrap: wrap;
@@ -9,10 +10,11 @@
   margin-bottom:  500px;
   padding-bottom: 0px;
   padding-top: 0px;
+  */
 }
 .square{
-
-  background-color: black;
+/*
+  background-color: rgb(243, 13, 13);
   display: inline-flex;
   flex-wrap: wrap;
   margin-left: 0px;
@@ -23,9 +25,11 @@
   padding-left: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
+  */
 
 }
 .box{
+  /*
   background-color:white;
   margin-left: 0px;
   margin-right: 0px;
@@ -38,4 +42,8 @@
   display: inline-flex;
   flex-wrap: wrap;
   font-size:4px;
+  */
+}
+#cells{
+  display: inline-flex;
 }

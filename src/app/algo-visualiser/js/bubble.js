@@ -4,7 +4,7 @@ var switched = 1;
 var f=0;
 var arrayAccess = 0;
 async function bubbleSort(){
-  //console.log("bubbleSort");
+
 
   if(resetOn === 1)
     return;
@@ -38,7 +38,7 @@ async function bubbleSort(){
   }
 }
   if(sorted === 1){
-    //console.log("sorted equals one")
+
     //sorted = 1;
     isRunning = false;
     if(current===unsortedArray.length){console.log("sorted equals 6")
@@ -54,13 +54,11 @@ async function bubbleSort(){
 
 function bubbledraw(){
 
- console.log(arraylength)
- console.log(current)
+
   var i = 1;
   unsortedArray.forEach(index =>{
   squares[i - 1].style.backgroundColor = '#F1F3F4'
-      squares[current].style.backgroundColor = 'red'
-      //squares[current + 1].style.backgroundColor = 'yellow'
+  squares[current].style.backgroundColor = 'red'
   squares[i - 1].style.height = (index) +3+ '%'
   squares[i - 1].style.width = T*100/(1+(T+1)*arraylength) + '%'
     i++
@@ -68,7 +66,7 @@ function bubbledraw(){
 
   var j = 1;
   dividers.forEach(index =>{
-  dividers[j - 1].style.backgroundColor = '#202124'
+  dividers[j - 1].style.backgroundColor = '#000000'
   dividers[j - 1].style.width = 100/(1+(T+1)*arraylength) + '%'
   j++
   })

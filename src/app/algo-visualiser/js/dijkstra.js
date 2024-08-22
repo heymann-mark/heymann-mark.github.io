@@ -1,3 +1,4 @@
+
 var pq = new PriorityQueue();
 var previousVertex
 var weightmaps
@@ -138,6 +139,7 @@ async function djikstrasAlgorithm(src,dest){
 }resetOn=0
   return path;
 }
+
 function dijkstraReset(){
   resetOn=0
 if(!pq.isEmpty())

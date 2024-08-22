@@ -15,8 +15,54 @@ var resetOn = 0;
 var isRunning = false;
 var numberOfSCreens = 1;
 function sortSetup(method) {
+  /*
   htmlElements = "";
+  htmlElements +=
+  '<div class="delay-slider-container" id="delay-slider-container"style="float: left">'+
+            '<label for="delayRange" class="form-label">Speed: </label>'+
+            '<input '+
+              'type="range"'+
+              'min="500"'+
+              'max="1000"'+
+              'value="10"'+
+              'class="slider"'+
+              'id="delayRange"'+
+              'step="1"'+
+              'oninput="delaySliderChange(this.value)"'+
+             '[(ngModel)]="speed"'+
+           '/>'+
+           '<output class="slider-output">{{ speed }}</output>'+
+         '</div>'+
 
+         '<div class="quantity-slider-container" id="quantity-slider-container">'+
+           '<label for="quantityRange" class="form-label">Quantity: </label>'+
+            '<input '+
+              'type="range"'+
+              'min="100"'+
+              'max="1000"'+
+              'value="100"'+
+              'class="slider"'+
+              'id="quantityRange"'+
+              'step="1"'+
+              'oninput="quantity = this.value"'+
+              '[(ngModel)]="quantity"'+
+              'oninput="quantitySliderChange(this.value)"'+
+            '/>'+
+            '<output class="quantity-slider-output">{{ quantity }}</output>'+
+          '</div>';
+         // document.getElementById("slider-container").innerHTML = htmlElements;
+          var arraylength = document.getElementById("quantityRange").value;
+  container = document.getElementById("sort-container");
+  container.style.display = "flex";
+  randomizebutton = document.getElementById("randomizebutton");
+  randomizebutton.style.visibility = "hidden";
+  customizebutton = document.getElementById("customizebutton");
+  customizebutton.style.visibility = "hidden";
+  document.getElementById("cellsizeSliderContainer").style.visibility = "hidden";
+  //document.getElementById("cellsizeSliderContainer").style.display = "none";
+  document.getElementById("quantitySliderContainer").style.visibility = "visible";
+  */
+  htmlElements = "";
   htmlElements += '<div id = "display" '+
   'style = "'+
   'position:absolute;'+
@@ -41,6 +87,7 @@ function sortSetup(method) {
   htmlElements += '</div>';
 
   arraylength = document.getElementById("quantityRange").value;
+
   end = arraylength - 1;
   partitionIndex = arraylength - 1;
 
@@ -49,15 +96,11 @@ function sortSetup(method) {
     htmlElements += '<div class="line"> </div>';
     htmlElements += '<div class="bline"> </div>';
   }
-
-  //let the variable container be the div container
-  var container = document.getElementById("container");
-  //set the innerhtml  of container to all the divs line and bline
+  var container = document.getElementById("sort-container");
   container.innerHTML = htmlElements;
-  //make arrays of the line and bline divs
   squares = Array.from(document.querySelectorAll(".line"));
   dividers = Array.from(document.querySelectorAll(".bline"));
-  //make random array
+
   var n;
   for (n = 0; n < arraylength; n++) {
     unsortedArray[n] = Math.floor(Math.random() * 100);
