@@ -5,10 +5,10 @@ interval = null;
 //var cellsize = 14;
 var quantity = 100;
 
-async function chooseMethod(method) {
+async function chooseMethod(method) {console.log("hey"+method)
   //console.log("method in chooseMethod: "+method+document.getElementById("cellsizeRange").value);
-  if(document.getElementById("cellsizeRange")!== null)
-    cellsize = document.getElementById("cellsizeRange").value
+ // if(document.getElementById("cellsizeRange")!== null)
+   // cellsize = document.getElementById("cellsizeRange").value
  htmlElements = "";
  htmlElements += 'delay:<output id="delaySliderVal"> 10 ms &nbsp &nbsp</output>'
  htmlElements += 'quantity:<output id="quantitySliderVal"> 50 &nbsp</output>'
@@ -38,13 +38,13 @@ async function chooseMethod(method) {
     resetmerge();
     mergedraw();
   }
-  if (method > 2 && method < 5) {
+  if (method > 2 && method < 5) {console.log("hey2"+method)
     //sortSetup(method);
 
     if (method === 3) dijkstraReset();
     if (method === 4) astarReset();
 
-    searchSetup(method, cellsize);
+    searchSetup(method);
   }
 }
 chooseMethod(0)

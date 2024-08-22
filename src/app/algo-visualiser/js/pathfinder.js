@@ -2,7 +2,8 @@ var unvisited = [];
 //var squarewidth
 //calling searchSetup with sm(search Method) = 3 and cs(cell size) = 14
 console.log("method in pathfinder: " + method);
-function searchSetup(searchmethod, cellsize) {
+function searchSetup(searchmethod) {
+  console.log("method in pathfinder: " + searchmethod);
   htmlElements = "";
   htmlElements =
     '<div class="cellsize-slider-container" id="cellsize-slider-container">' +
@@ -21,22 +22,23 @@ function searchSetup(searchmethod, cellsize) {
     "/>" +
     '<output class="cellsize-slider-output">{{ cellsize }}</output>' +
     "</div>";
-    document.getElementById("container");
+   // document.getElementById("container");
   console.log("searchsetup");
-  container = document.getElementById("container");
-  container.style.display = "block";
-  container.style.overflow = "hidden";
+  container = document.getElementById("search-container");
+  //container.style.display = "block";
+  //container.style.overflow = "hidden";
   //document.getElementById("quantitySliderContainer").style.visibility =
-    "hidden";
+    //"hidden";
   //document.getElementById("cellsize").style.visibility = "visible";
   //document.getElementById("searchdisplay").style.visibility = "visible";
   //document.getElementById("searchdisplay").style.paddingTop = "100px";
   //document.getElementById("searchdisplay").style.paddingTop
-  randomizebutton.style.visibility = "visible";
-  customizebutton.style.visibility = "visible";
+ // randomizebutton.style.visibility = "visible";
+ // customizebutton.style.visibility = "visible";
   isStartChosen = 0;
   isStopChosen = 0;
   clearInterval(interval);
+  cellsize = document.getElementById("cellsizeRange").value;
   boxsize = cellsize - 2;
 
   // window height

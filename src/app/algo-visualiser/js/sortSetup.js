@@ -1,6 +1,8 @@
 //get the arraylength from the range slider on the page
 var unsortedArray = [];
-var arraylength = document.getElementById("quantityRange").value;
+var arraylength=0;
+if (document.getElementById("quantityRange") != null)
+  arraylength = document.getElementById("quantityRange").value;
 var end = arraylength - 1;
 var partitionIndex = arraylength - 1;
 //set speed
@@ -63,18 +65,19 @@ function sortSetup(method) {
   document.getElementById("quantitySliderContainer").style.visibility = "visible";
   */
   htmlElements = "";
-  htmlElements += '<div id = "display" '+
-  'style = "'+
-  'position:absolute;'+
-  'z-index:1;'+
-  'width:380px;'+
-  'height:30px;'+
-  'float:right;'+
-  'background-color:black;'+
-  'color:white;'+
-  'overflow-x:hidden;'+
-  'overflow-y:hidden;'+
-  '">';
+  htmlElements +=
+    '<div id = "display" ' +
+    'style = "' +
+    "position:absolute;" +
+    "z-index:1;" +
+    "width:380px;" +
+    "height:30px;" +
+    "float:right;" +
+    "background-color:black;" +
+    "color:white;" +
+    "overflow-x:hidden;" +
+    "overflow-y:hidden;" +
+    '">';
   if (method === 0) htmlElements += "Bubble Sort &nbsp &nbsp";
   if (method === 1) htmlElements += "Quick Sort &nbsp &nbsp";
   if (method === 2) htmlElements += "Merge Sort &nbsp &nbsp";
@@ -84,9 +87,9 @@ function sortSetup(method) {
   htmlElements +=
     'swaps:<output id="swapVal" class = "output"  [(ngModel)]="swaps"> 0 </output> &nbsp &nbsp';
 
-  htmlElements += '</div>';
-
-  arraylength = document.getElementById("quantityRange").value;
+  htmlElements += "</div>";
+  if (document.getElementById("quantityRange") != null)
+    arraylength = document.getElementById("quantityRange").value;
 
   end = arraylength - 1;
   partitionIndex = arraylength - 1;
@@ -96,8 +99,8 @@ function sortSetup(method) {
     htmlElements += '<div class="line"> </div>';
     htmlElements += '<div class="bline"> </div>';
   }
-  var container = document.getElementById("sort-container");
-  container.innerHTML = htmlElements;
+  if (document.getElementById("sort-container") != null)
+  document.getElementById("sort-container").innerHTML = htmlElements;
   squares = Array.from(document.querySelectorAll(".line"));
   dividers = Array.from(document.querySelectorAll(".bline"));
 

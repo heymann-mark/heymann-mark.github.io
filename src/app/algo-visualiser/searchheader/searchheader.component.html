@@ -22,24 +22,9 @@ color-on-scroll="400"
         <output class="slider-output">{{ speed }}</output>
       </div>
 
-      <div class="slider-container" id="quantitySliderContainer">
-        <label for="quantityRange" class="form-label">Quantity: </label>
-        <input
-          type="range"
-          min="100"
-          max="1000"
-          value="100"
-          class="slider"
-          id="quantityRange"
-          step="1"
-          oninput="quantity = this.value"
-          [(ngModel)]="quantity"
-          oninput="quantitySliderChange(this.value)"
-        />
-        <output class="quantity-slider-output">{{ quantity }}</output>
-      </div>
+
       <div class="slider-container" id="cellsizeSliderContainer">
-        <label for="quantityRange" class="form-label">Cellsize: </label>
+        <label for="cellsizeRange" class="form-label">Cellsize: </label>
         <input
           type="range"
           min="8"
@@ -48,7 +33,7 @@ color-on-scroll="400"
           class="slider"
           id="cellsizeRange"
           step="1"
-          oninput="quantity = this.value"
+          oninput="cellsize = this.value"
           [(ngModel)]="cellsize"
           oninput="cellsizeSliderChange(this.value)"
         />
