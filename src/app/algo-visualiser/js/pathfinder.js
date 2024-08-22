@@ -61,7 +61,7 @@ function searchSetup(searchmethod) {
   }
   console.log("cellsize::::::::::::::::::" + cellsize);
   columns = Math.floor(width / cellsize);
-  rows = Math.floor(height / cellsize - 1);
+  rows = Math.floor((height -80)/ cellsize );
   max = columns * rows;
   customizing = 0;
   visited = new Map();
@@ -69,7 +69,7 @@ function searchSetup(searchmethod) {
   htmlElements = "";
   if (searchmethod === 3)
     htmlElements +=
-      '<div id="searchdisplay" style = "background-color:black;color:white;display:flex">djikstra\'s algorithm';
+      '<div id="searchdisplay" style = "background-color:black;color:white;display:flex;margin-top:55px;">djikstra\'s algorithm';
   if (searchmethod === 4)
     htmlElements +=
       '<div id="searchdisplay" style = "background-color:red;color:white;">&nbsp &nbsp A* Algorithm &nbsp &nbsp';
@@ -83,6 +83,7 @@ function searchSetup(searchmethod) {
     'style = "' +
     "overflow-x:hidden" +
     "width:100%;" +
+    "padding-top:0px;" +
     "display:flex;" +
     'flex-wrap: wrap;">';
 

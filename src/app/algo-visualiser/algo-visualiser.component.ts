@@ -7,10 +7,11 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {CdkDrag} from '@angular/cdk/drag-drop';
 import {SortComponent} from './sort/sort.component'
+import {SearchComponent} from './search/search.component'
 @Component({
   selector: 'app-algo-visualiser',
   standalone: true,
-  imports: [SortComponent,NgbDropdownModule, NgbTooltipModule,FormsModule,
+  imports: [SearchComponent, SortComponent,NgbDropdownModule, NgbTooltipModule,FormsModule,
     NgbPopoverModule, NgbCollapseModule, DragDropModule,CdkDrag ],
   templateUrl: './algo-visualiser.component.html',
   styleUrl: './algo-visualiser.component.css'
