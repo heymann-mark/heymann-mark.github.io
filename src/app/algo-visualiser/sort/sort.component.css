@@ -170,6 +170,7 @@ output {
   position: absolute;
   display: flex;
   flex-wrap: wrap-reverse;
+  padding-top:60px;
 }
 #display {
 }
