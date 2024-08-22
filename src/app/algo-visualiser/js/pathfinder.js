@@ -3,6 +3,7 @@ var unvisited = [];
 //calling searchSetup with sm(search Method) = 3 and cs(cell size) = 14
 console.log("method in pathfinder: " + method);
 function searchSetup(searchmethod) {
+  method = searchmethod;
   console.log("method in pathfinder: " + searchmethod);
   htmlElements = "";
   htmlElements =
@@ -69,7 +70,7 @@ function searchSetup(searchmethod) {
   htmlElements = "";
   if (searchmethod === 3)
     htmlElements +=
-      '<div id="searchdisplay" style = "background-color:black;color:white;display:flex;margin-top:55px;">djikstra\'s algorithm';
+      '<div id="searchdisplay" style = "background-color:red;color:white;display:flex;margin-top:55px;">djikstra\'s algorithm';
   if (searchmethod === 4)
     htmlElements +=
       '<div id="searchdisplay" style = "background-color:red;color:white;">&nbsp &nbsp A* Algorithm &nbsp &nbsp';
