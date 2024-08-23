@@ -37,17 +37,16 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./node_modules/aos/dist/aos.js",
               "src/assets/js/main.js",
-              "src/app/algo-visualiser/js/priorityQueue.js",
-              "src/app/algo-visualiser/js/dijkstra.js",
-              "src/app/algo-visualiser/js/quick.js",
-              "src/app/algo-visualiser/js/astar.js",
-
-              "src/app/algo-visualiser/js/merge.js",
-              "src/app/algo-visualiser/js/bubble.js",
-              "src/app/algo-visualiser/js/pathfinder.js",
-              "src/app/algo-visualiser/js/header.js",
-              "src/app/algo-visualiser/js/sortSetup.js",
-              "src/app/algo-visualiser/js/app.js"
+              "src/assets/js/priorityQueue.js",
+              "src/assets/js/dijkstra.js",
+              "src/assets/js/quick.js",
+              "src/assets/js/astar.js",
+              "src/assets/js/merge.js",
+              "src/assets/js/bubble.js",
+              "src/assets/js/pathfinder.js",
+              "src/assets/js/header.js",
+              "src/assets/js/sortSetup.js",
+              "src/assets/js/app.js"
 
 
             ],
