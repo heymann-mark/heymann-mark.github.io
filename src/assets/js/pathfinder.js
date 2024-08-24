@@ -1,9 +1,11 @@
 var unvisited = [];
 cellsize = 16;
+
 //var squarewidth
 //calling searchSetup with sm(search Method) = 3 and cs(cell size) = 14
 console.log("method in pathfinder: " + method);
 function searchSetup(searchmethod) {
+  //location.href = './search';
   method = searchmethod;
   console.log("method in pathfinder: " + searchmethod);
   htmlElements = "";
@@ -135,6 +137,7 @@ function searchSetup(searchmethod) {
   var i = 0;
   var k = 0;
   draw(-1);
+
 }
 
 function randomize() {

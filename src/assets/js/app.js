@@ -5,26 +5,12 @@ interval = null;
 //var cellsize = 14;
 var quantity = 100;
 
-async function chooseMethod(method) {console.log("chooseMethod(method) was called"+method)
-  //console.log("method in chooseMethod: "+method+document.getElementById("cellsizeRange").value);
- // if(document.getElementById("cellsizeRange")!== null)
-   // cellsize = document.getElementById("cellsizeRange").value
- htmlElements = "";
- htmlElements += 'delay:<output id="delaySliderVal"> 10 ms &nbsp &nbsp</output>'
- htmlElements += 'quantity:<output id="quantitySliderVal"> 50 &nbsp</output>'
- htmlElements += 'swaps:<output id="swapVal"> 0 &nbsp &nbsp &nbsp </output>'
- if(method===0)
-     htmlElements += '&nbsp &nbsp Bubble Sort'
- if(method===1)
-     htmlElements += '&nbsp &nbsp Quick Sort'
- if(method===2)
-     htmlElements += '&nbsp &nbsp Merge Sort'
- //var display = document.getElementById("display");
-//display.innerHTML = htmlElements;
+async function chooseMethod(method) {
  delaySliderChange(document.getElementById("delayRange").value)
   clearInterval(interval);
-  //method = m;
-  if (method < 3) sortSetup(method);
+  if (method < 3) {
+    location.href = './sort';
+  }
   if (method === 0) {
     resetbubble();
     bubbledraw();
@@ -38,17 +24,15 @@ async function chooseMethod(method) {console.log("chooseMethod(method) was calle
     resetmerge();
     mergedraw();
   }
-  if (method > 2 && method < 5) {console.log("hey2"+method)
-    //sortSetup(method);
-
+  if (method > 2 && method < 5) {
+     location.href = './search';
     if (method === 3) dijkstraReset();
     if (method === 4) astarReset();
-
     searchSetup(method);
   }
 }
-chooseMethod(0)
-chooseMethod(3)
+sortSetup(0);
+searchSetup(3);
 /*
 async function start(){
   console.log("pushed start button"+method + isRunning);

@@ -1,6 +1,6 @@
 //get the arraylength from the range slider on the page
 var unsortedArray = [];
-var arraylength=0;
+var arraylength = 0;
 if (document.getElementById("quantityRange") != null)
   arraylength = document.getElementById("quantityRange").value;
 var end = arraylength - 1;
@@ -16,54 +16,9 @@ var dividers;
 var resetOn = 0;
 var isRunning = false;
 var numberOfSCreens = 1;
-function sortSetup(method) {console.log("You aer inside of sort setup");
-  /*
-  htmlElements = "";
-  htmlElements +=
-  '<div class="delay-slider-container" id="delay-slider-container"style="float: left">'+
-            '<label for="delayRange" class="form-label">Speed: </label>'+
-            '<input '+
-              'type="range"'+
-              'min="500"'+
-              'max="1000"'+
-              'value="10"'+
-              'class="slider"'+
-              'id="delayRange"'+
-              'step="1"'+
-              'oninput="delaySliderChange(this.value)"'+
-             '[(ngModel)]="speed"'+
-           '/>'+
-           '<output class="slider-output">{{ speed }}</output>'+
-         '</div>'+
+function sortSetup(method) {
+  console.log("You aer inside of sort setup");
 
-         '<div class="quantity-slider-container" id="quantity-slider-container">'+
-           '<label for="quantityRange" class="form-label">Quantity: </label>'+
-            '<input '+
-              'type="range"'+
-              'min="100"'+
-              'max="1000"'+
-              'value="100"'+
-              'class="slider"'+
-              'id="quantityRange"'+
-              'step="1"'+
-              'oninput="quantity = this.value"'+
-              '[(ngModel)]="quantity"'+
-              'oninput="quantitySliderChange(this.value)"'+
-            '/>'+
-            '<output class="quantity-slider-output">{{ quantity }}</output>'+
-          '</div>';
-         // document.getElementById("slider-container").innerHTML = htmlElements;
-          var arraylength = document.getElementById("quantityRange").value;
-  container = document.getElementById("sort-container");
-  container.style.display = "flex";
-  randomizebutton = document.getElementById("randomizebutton");
-  randomizebutton.style.visibility = "hidden";
-  customizebutton = document.getElementById("customizebutton");
-  customizebutton.style.visibility = "hidden";
-  document.getElementById("cellsizeSliderContainer").style.visibility = "hidden";
-  //document.getElementById("cellsizeSliderContainer").style.display = "none";
-  document.getElementById("quantitySliderContainer").style.visibility = "visible";
-  */
   htmlElements = "";
   htmlElements +=
     '<div id = "display" ' +
@@ -100,7 +55,7 @@ function sortSetup(method) {console.log("You aer inside of sort setup");
     htmlElements += '<div class="bline"> </div>';
   }
   if (document.getElementById("sort-container") != null)
-  document.getElementById("sort-container").innerHTML = htmlElements;
+    document.getElementById("sort-container").innerHTML = htmlElements;
   squares = Array.from(document.querySelectorAll(".line"));
   dividers = Array.from(document.querySelectorAll(".bline"));
 
@@ -108,5 +63,23 @@ function sortSetup(method) {console.log("You aer inside of sort setup");
   for (n = 0; n < arraylength; n++) {
     unsortedArray[n] = Math.floor(Math.random() * 100);
   }
-  unsortedArray.length = arraylength;
+  if (method == 0) {
+    unsortedArray.length = arraylength;
+    var i = 1;
+    unsortedArray.forEach((index) => {
+      squares[i - 1].style.backgroundColor = "#F1F3F4";
+      squares[current].style.backgroundColor = "red";
+      squares[i - 1].style.height = index + 3 + "%";
+      squares[i - 1].style.width =
+        (T * 100) / (1 + (T + 1) * arraylength) + "%";
+      i++;
+    });
+
+    var j = 1;
+    dividers.forEach((index) => {
+      dividers[j - 1].style.backgroundColor = "#000000";
+      dividers[j - 1].style.width = 100 / (1 + (T + 1) * arraylength) + "%";
+      j++;
+    });
+  }
 }
