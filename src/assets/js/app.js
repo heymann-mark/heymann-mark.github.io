@@ -1,4 +1,4 @@
-var method = 3;
+var method=0;
 var s1 = 0;
 var s2 = 0;
 interval = null;
@@ -63,9 +63,9 @@ async function start(){
 async function sleep(ms){
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-function reset(){
-  chooseMethod(method)
-}
+//function reset(){
+  //chooseMethod(method)
+//}
 
 
 

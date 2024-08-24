@@ -1,13 +1,6 @@
 var unvisited = [];
 cellsize = 16;
-
-//var squarewidth
-//calling searchSetup with sm(search Method) = 3 and cs(cell size) = 14
-console.log("method in pathfinder: " + method);
 function searchSetup(searchmethod) {
-  //location.href = './search';
-  method = searchmethod;
-  console.log("method in pathfinder: " + searchmethod);
   htmlElements = "";
   htmlElements =
     '<div class="cellsize-slider-container" id="cellsize-slider-container">' +
@@ -26,45 +19,13 @@ function searchSetup(searchmethod) {
     "/>" +
     '<output class="cellsize-slider-output">{{ cellsize }}</output>' +
     "</div>";
-   // document.getElementById("container");
-  console.log("searchsetup");
   container = document.getElementById("search-container");
-  console.log("searchsetup"+document.getElementById("search-container"));
-  //container.style.display = "block";
-  //container.style.overflow = "hidden";
-  //document.getElementById("quantitySliderContainer").style.visibility =
-    //"hidden";
-  //document.getElementById("cellsize").style.visibility = "visible";
-  //document.getElementById("searchdisplay").style.visibility = "visible";
-  //document.getElementById("searchdisplay").style.paddingTop = "100px";
-  //document.getElementById("searchdisplay").style.paddingTop
- // randomizebutton.style.visibility = "visible";
- // customizebutton.style.visibility = "visible";
   isStartChosen = 0;
   isStopChosen = 0;
   clearInterval(interval);
-  //cellsize = document.getElementById("cellsizeRange").value;
   boxsize = cellsize - 2;
-
-  // window height
   const height = window.innerHeight;
-
-  // window width
   const width = window.innerWidth;
-
-  //console.log("height and width: "+height, width); // 711 1440
-  go();
-  window.addEventListener("resize", go);
-  function go() {
-    //console.log("resize event...");
-    //console.log("window.innerHeight..."+window.innerHeight);
-    // console.log("window.innerWidth..."+window.innerWidth);
-    // console.log("document.documentElement.clientWidth..."+document.documentElement.clientWidth);
-    // console.log("document.documentElement.clientHeight..."+document.documentElement.clientHeight);
-    //document.querySelector('.width').innerText = document.documentElement.clientWidth;
-    //document.querySelector('.height').innerText = document.documentElement.clientHeight;
-  }
-  console.log("cellsize::::::::::::::::::" + cellsize);
   columns = Math.floor(width / cellsize);
   rows = Math.floor((height -80)/ cellsize );
   max = columns * rows;
@@ -78,11 +39,8 @@ function searchSetup(searchmethod) {
   if (searchmethod === 4)
     htmlElements +=
       '<div id="searchdisplay" style = "background-color:red;color:white;">&nbsp &nbsp A* Algorithm &nbsp &nbsp';
-
   htmlElements += "<output id=instructions></output>";
-
   htmlElements += "</div>"; //close searchdisplay
-
   htmlElements +=
     '<div id = "grid" ' +
     'style = "' +
@@ -91,7 +49,6 @@ function searchSetup(searchmethod) {
     "padding-top:0px;" +
     "display:flex;" +
     'flex-wrap: wrap;">';
-
   for (var i = 0; i < unvisited.length; i++) {
     htmlElements +=
       '<div class="square" ' +
@@ -204,9 +161,7 @@ function customize() {
 }
 
 function draw(i) {
-  console.log("drawing....................................." + method);
   if (i === -1) {
-    console.log("i === -1");
     document.getElementById("instructions").innerHTML =
       "&nbsp Click Square to choose start";
   } else {

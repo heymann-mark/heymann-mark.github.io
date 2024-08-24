@@ -11,16 +11,18 @@ function delaySliderChange(val) {
   }
 }
 function quantitySliderChange(val) {
+  console.log("quantitySliderChange: quantity:" + quantity);
   quantity = val;
-  reset();
+ reset();
 }
 
-function reset() {
+function reset() {console.log("method in reset: "+method);
   arrayAccess = 0;
   document.getElementById("quantityRange").disabled = false;
   document.getElementById("startbutton").innerHTML = "Start";
   paused = false;
-  chooseMethod(method);
+  console.log("method in reset: "+method);
+  sortSetup(method);
 }
 
 async function start() {
