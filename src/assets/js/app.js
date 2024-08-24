@@ -48,6 +48,7 @@ async function chooseMethod(method) {console.log("chooseMethod(method) was calle
   }
 }
 chooseMethod(0)
+chooseMethod(3)
 /*
 async function start(){
   console.log("pushed start button"+method + isRunning);
