@@ -21,7 +21,6 @@ function reset() {console.log("method in reset: "+method);
   document.getElementById("quantityRange").disabled = false;
   document.getElementById("startbutton").innerHTML = "Start";
   paused = false;
-  console.log("method in reset: "+method);
   sortSetup(method);
 }
 

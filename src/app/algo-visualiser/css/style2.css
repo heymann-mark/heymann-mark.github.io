@@ -154,9 +154,7 @@ output {
   color: #e3e3e3;
   background-color: #000000;
 }
-.container-fluid {
-  display: contents; /*fixes right gap*/
-}
+
 .algo-container {
   display: contents; /*fixes right gap*/
   padding-top: 100px;
@@ -261,4 +259,7 @@ output {
   height: 400px;
   max-width: 100%;
   border: dotted #ccc 2px;
+}
+.container-fluid {
+  display: contents; /*fixes right gap*/
 }

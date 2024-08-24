@@ -17,7 +17,7 @@ var resetOn = 0;
 var isRunning = false;
 var numberOfSCreens = 1;
 function sortSetup(method) {
-  console.log("You aer inside of sort setup");
+  console.log("You are inside of sort setup");
 
   htmlElements = "";
   htmlElements +=

@@ -4,7 +4,7 @@ var previousVertex
 var weightmaps
 var dist
 var weight
-async function djikstra(src,dest){console.log("djikstra........................................");
+async function djikstra(src,dest){
    src = parseFloat(src)
    dest = parseFloat(dest)
    previousVertex= new Map();

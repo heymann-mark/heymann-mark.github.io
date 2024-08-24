@@ -9,8 +9,6 @@ function resetquick() {
 }
 
 async function quickSort(begin, end) {
-  //console.log("quickSort, begin   " + begin + ", end   " + end);
- 
   if (resetOn === 1) {
     return;
   }
@@ -22,7 +20,6 @@ async function quickSort(begin, end) {
 }
 
 async function partition(p1, p2) {
-  console.log("partition: " + speed);
   var pivot = unsortedArray[p2];
   var i = p1 - 1;
   switched = 0;

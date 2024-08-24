@@ -14,5 +14,7 @@ export class SearchheaderComponent {
   @Input() quantity = 100;
   @Input() cellsize = 14;
 
-
+  cellsizeSliderChange(val:number){
+    console.log("here we are changing the cell size"+val);
+  }
 }

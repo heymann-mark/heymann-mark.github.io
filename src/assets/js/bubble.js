@@ -53,8 +53,6 @@ async function bubbleSort(){
 
 
 function bubbledraw(){
-
-console.log("you are in bubble draw")
   var i = 1;
   unsortedArray.forEach(index =>{
   squares[i - 1].style.backgroundColor = '#F1F3F4'

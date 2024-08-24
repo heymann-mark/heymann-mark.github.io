@@ -1,25 +1,6 @@
 var unvisited = [];
 cellsize = 16;
 function searchSetup(searchmethod) {
-  htmlElements = "";
-  htmlElements =
-    '<div class="cellsize-slider-container" id="cellsize-slider-container">' +
-    '<label for="cellsizeRange" class="form-label">Cellsize: </label>' +
-    "<input " +
-    'type="range"' +
-    'min="8"' +
-    'max="30"' +
-    'value="14"' +
-    'class="slider"' +
-    'id="cellsizeRange"' +
-    'step="1"' +
-    'oninput="quantity = this.value"' +
-    '[(ngModel)]="cellsize"' +
-    'oninput="cellsizeSliderChange(this.value)"' +
-    "/>" +
-    '<output class="cellsize-slider-output">{{ cellsize }}</output>' +
-    "</div>";
-  container = document.getElementById("search-container");
   isStartChosen = 0;
   isStopChosen = 0;
   clearInterval(interval);
@@ -27,7 +8,7 @@ function searchSetup(searchmethod) {
   const height = window.innerHeight;
   const width = window.innerWidth;
   columns = Math.floor(width / cellsize);
-  rows = Math.floor((height -80)/ cellsize );
+  rows = Math.floor((height - 80) / cellsize);
   max = columns * rows;
   customizing = 0;
   visited = new Map();
@@ -79,10 +60,10 @@ function searchSetup(searchmethod) {
       "</div>";
   }
   htmlElements += "</div>"; //closing grid
-  //var container = document.getElementById("container");
-  container.innerHTML = htmlElements;
-  //delaySliderChange(document.getElementById("delayRange").value);
-  //var squares = Array.from(document.querySelectorAll('.square'));
+  if (document.getElementById("search-container") != null) {
+    container = document.getElementById("search-container");
+    container.innerHTML = htmlElements;
+  }
   boxes = Array.from(document.querySelectorAll(".box"));
   var unvisitedlength = unvisited.length;
   for (i = 0; i < unvisitedlength; i++) {
@@ -94,7 +75,6 @@ function searchSetup(searchmethod) {
   var i = 0;
   var k = 0;
   draw(-1);
-
 }
 
 function randomize() {
@@ -162,8 +142,9 @@ function customize() {
 
 function draw(i) {
   if (i === -1) {
-    document.getElementById("instructions").innerHTML =
-      "&nbsp Click Square to choose start";
+    if (document.getElementById("instructions") != null)
+      document.getElementById("instructions").innerHTML =
+        "&nbsp Click Square to choose start";
   } else {
     if (customizing === 0) {
       if (isStartChosen === 0) {
@@ -174,7 +155,6 @@ function draw(i) {
           document.getElementById("instructions").innerHTML =
             "Click Square to choose end";
       } else if (isStopChosen === 0) {
-        console.log("isStopChosen" + method);
         isStopChosen = 1;
         boxes[i].style.backgroundColor = "red";
         stop = i;
