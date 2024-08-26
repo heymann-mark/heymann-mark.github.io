@@ -5,8 +5,9 @@ interval = null;
 //var cellsize = 14;
 var quantity = 100;
 
-async function chooseMethod(method) {
-  method = method;
+async function chooseMethod(m) {
+  method = m;
+  document.getElementById("startbutton").innerHTML = "Start";
 
   console.log("first entering choose method with method: "+method);
   clearInterval(interval);
