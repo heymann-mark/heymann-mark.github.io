@@ -1,11 +1,13 @@
 function resetquick() {
   document.getElementById("startbutton").disabled = false;
-  //clearInterval(interval);
+  clearInterval(interval);
   if (isRunning) resetOn = 1;
   isRunning = false;
   s1 = 0;
   s2 = 0;
   swaps = -1;
+  sortSetup();
+  quickdraw();
 }
 
 async function quickSort(begin, end) {
@@ -13,9 +15,12 @@ async function quickSort(begin, end) {
     return;
   }
   if (begin < end) {
+    arrayAccess++;
+    document.getElementById('arrayAccessVal').innerHTML = arrayAccess;
     await partition(begin, end);
     await quickSort(begin, partitionIndex - 1);
     await quickSort(partitionIndex + 1, end);
+
   }
 }
 
@@ -26,7 +31,7 @@ async function partition(p1, p2) {
   for (j = p1; j < p2; j++) {
     if (resetOn === 1) return;
     if (unsortedArray[j] <= pivot) {
-     // speed = 1010 - document.getElementById("delayRange").value;
+      speed = 1010 - document.getElementById("delayRange").value*10;
       console.log("partition2: " + speed);
       await sleep(speed);
       i++;

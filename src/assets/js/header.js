@@ -52,12 +52,11 @@ async function start() {console.log("make it start again"+method)
       if (method === 0)
          interval = setInterval("bubbleSort()", speed);
       if (method === 1) {
-        //pauseQuick()
-        //await quickSort(0, arraylength - 1);
-          //speed = 1010-document.getElementById("delayRange").value
-
-          //await quickSort(0, arraylength - 1);
-          speed = 1010 - document.getElementById("delayRange").value;
+        pauseQuick()
+        await quickSort(0, arraylength - 1);
+          speed = 1010-document.getElementById("delayRange").value*10
+          await quickSort(0, arraylength - 1);
+          speed = 1010 - document.getElementById("delayRange").value*10;
 
         }
       //if (method === 2) interval = setInterval("bubbleSort()", speed);
@@ -84,7 +83,7 @@ function reset() {
 
     console.log("method in reset: "+method);
     if(method == 0)resetbubble();
-    if(method == 1){resetquick();quickdraw();}
+    if(method == 1){resetquick();}
     if(method == 2)resetMerge();
     document.getElementById("startbutton").disabled = false;
     document.getElementById("startbutton").innerHTML = "Start";

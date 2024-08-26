@@ -4,8 +4,6 @@ var switched = 1;
 var f=0;
 var arrayAccess = 0;
 async function bubbleSort(){
-
-
   if(resetOn === 1)
     return;
   if(sorted===0){
