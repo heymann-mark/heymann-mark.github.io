@@ -17,7 +17,5 @@ import {SearchComponent} from './search/search.component'
   styleUrl: './algo-visualiser.component.css'
 })
 export class AlgoVisualiserComponent  {
-  @Input() speed = 500;
-  @Input() quantity = 100;
-  @Input() cellsize =14;
+
 }

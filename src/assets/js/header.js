@@ -20,7 +20,7 @@ function quantitySliderChange(val) {
 
 async function start() {console.log("make it start again"+method)
   document.getElementById("startbutton").innerHTML = "Pause";
-  speed = 1010 - document.getElementById("delayRange").value;
+  speed = 1010 - document.getElementById("delayRange").value*10;//this line works
   if (!isRunning) {
     document.getElementById("quantityRange").disabled = true;
     if (method === 0) {

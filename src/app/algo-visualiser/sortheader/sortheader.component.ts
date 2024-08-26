@@ -12,7 +12,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 export class SortheaderComponent {
 
 
-@Input() speed = 500;
+@Input() speed = 1;
 @Input() quantity = 100;
 @Input() cellsize = 14;
 }

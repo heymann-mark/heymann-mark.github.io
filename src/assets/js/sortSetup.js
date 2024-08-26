@@ -6,7 +6,7 @@ if (document.getElementById("quantityRange") != null)
 var end = arraylength - 1;
 var partitionIndex = arraylength - 1;
 //set speed
-var speed = 500;
+var speed = 0;
 var sorted = 0;
 //set is running
 //var htmlElements = "";
