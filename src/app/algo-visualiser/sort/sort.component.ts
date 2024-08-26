@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {SortheaderComponent} from '../sortheader/sortheader.component';
 import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-sort',
   standalone: true,

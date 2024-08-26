@@ -33,7 +33,8 @@ async function chooseMethod(m) {
     searchSetup(method);
   }
 }
-sortSetup(0);
+sortSetup();
+bubbledraw();
 //searchSetup(3);
 
 async function sleep(ms){
@@ -43,32 +44,7 @@ async function sleep(ms){
   //chooseMethod(method)
 //}
 
-function reset() {
-/*
-Here I should
-*/
 
-
-
-  console.log("method in reset: "+method);
-  if(method == 0)resetbubble();
-  if(method == 1)resetquick();
-  if(method == 2)resetMerge();
-  document.getElementById("startbutton").disabled = false;
-  document.getElementById("startbutton").innerHTML = "Start";
-  document.getElementById("quantityRange").disabled = false;
-      /*
-  arrayAccess = 0;
-  document.getElementById("quantityRange").disabled = false;
-  document.getElementById("startbutton").disabled = false;
-  //document.getElementById("startbutton").innerHTML = "Start";
-  ///document.getElementById("startbutton").disabled = "false";
-  paused = false;
-  sortSetup(method);
-  current = 0;
-  resetbubble();
-  */
-}
 
 
 

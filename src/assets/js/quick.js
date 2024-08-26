@@ -55,6 +55,8 @@ async function swap(arr, a, b) {
 
 async function quickdraw() {
   //console.log("quickdraw  " + speed);
+  htmlElements = "Quick Sort &nbsp &nbsp";
+  document.getElementById("sort-label").innerHTML = htmlElements;
   if (resetOn === 1 && isRunning) return;
   var j = 1;
   dividers.forEach((index) => {
@@ -77,7 +79,7 @@ async function quickdraw() {
 }
 async function pauseQuick(){
   while(paused){
-    
+
   }
 }
 async function finishedquickDraw() {

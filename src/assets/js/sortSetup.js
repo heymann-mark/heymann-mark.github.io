@@ -16,9 +16,8 @@ var dividers;
 var resetOn = 0;
 var isRunning = false;
 var numberOfSCreens = 1;
-function sortSetup(method) {
+function sortSetup() {
   console.log("You are inside of sort setup"+method);
-
   htmlElements = "";
   htmlElements +=
     '<div id = "display" ' +
@@ -33,9 +32,8 @@ function sortSetup(method) {
     "overflow-x:hidden;" +
     "overflow-y:hidden;" +
     '">';
-  if (method === 0) htmlElements += "Bubble Sort &nbsp &nbsp";
-  if (method === 1) htmlElements += "Quick Sort &nbsp &nbsp";
-  if (method === 2) htmlElements += "Merge Sort &nbsp &nbsp";
+    htmlElements += '<label id="sort-label" class="form-label"> </label>';
+
 
   htmlElements +=
     'array access:<output id="arrayAccessVal" class = "output"> 0  </output> &nbsp &nbsp';
@@ -63,23 +61,5 @@ function sortSetup(method) {
   for (n = 0; n < arraylength; n++) {
     unsortedArray[n] = Math.floor(Math.random() * 100);
   }
-  if (method == 0) {
-    unsortedArray.length = arraylength;
-    var i = 1;
-    unsortedArray.forEach((index) => {
-      squares[i - 1].style.backgroundColor = "#F1F3F4";
-      squares[current].style.backgroundColor = "red";
-      squares[i - 1].style.height = index + 3 + "%";
-      squares[i - 1].style.width =
-        (T * 100) / (1 + (T + 1) * arraylength) + "%";
-      i++;
-    });
-
-    var j = 1;
-    dividers.forEach((index) => {
-      dividers[j - 1].style.backgroundColor = "#000000";
-      dividers[j - 1].style.width = 100 / (1 + (T + 1) * arraylength) + "%";
-      j++;
-    });
-  }
+  //bubbledraw()
 }

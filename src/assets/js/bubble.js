@@ -52,7 +52,9 @@ async function bubbleSort(){
 }
 
 
-function bubbledraw(){
+ function bubbledraw(){
+  htmlElements = "Bubble Sort &nbsp &nbsp";
+  document.getElementById("sort-label").innerHTML = htmlElements;
   var i = 1;
   unsortedArray.forEach(index =>{
   squares[i - 1].style.backgroundColor = '#F1F3F4'
@@ -80,5 +82,5 @@ function resetbubble(){
   isRunning = false
   swaps = 0
   clearInterval(interval)
-  sortSetup(0);
+  sortSetup();
 }

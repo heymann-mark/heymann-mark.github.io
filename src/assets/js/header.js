@@ -75,5 +75,30 @@ async function start() {console.log("make it start again"+method)
   }
 }
 
+function reset() {
+  /*
+  Here I should
+  */
 
+
+
+    console.log("method in reset: "+method);
+    if(method == 0)resetbubble();
+    if(method == 1){resetquick();quickdraw();}
+    if(method == 2)resetMerge();
+    document.getElementById("startbutton").disabled = false;
+    document.getElementById("startbutton").innerHTML = "Start";
+    document.getElementById("quantityRange").disabled = false;
+        /*
+    arrayAccess = 0;
+    document.getElementById("quantityRange").disabled = false;
+    document.getElementById("startbutton").disabled = false;
+    //document.getElementById("startbutton").innerHTML = "Start";
+    ///document.getElementById("startbutton").disabled = "false";
+    paused = false;
+    sortSetup(method);
+    current = 0;
+    resetbubble();
+    */
+  }
 
