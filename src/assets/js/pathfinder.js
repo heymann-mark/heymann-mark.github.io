@@ -1,6 +1,7 @@
 var unvisited = [];
 cellsize = 16;
 function searchSetup(searchmethod) {
+  console.log("You are in search setup with method:"+ method);
   isStartChosen = 0;
   isStopChosen = 0;
   clearInterval(interval);

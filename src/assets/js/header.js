@@ -16,15 +16,9 @@ function quantitySliderChange(val) {
  reset();
 }
 
-function reset() {console.log("method in reset: "+method);
-  arrayAccess = 0;
-  document.getElementById("quantityRange").disabled = false;
-  document.getElementById("startbutton").innerHTML = "Start";
-  paused = false;
-  sortSetup(method);
-}
 
-async function start() {
+
+async function start() {console.log("make it start again"+method)
   document.getElementById("startbutton").innerHTML = "Pause";
   speed = 1010 - document.getElementById("delayRange").value;
   if (!isRunning) {
@@ -74,7 +68,7 @@ async function start() {
 
          speed  = 1000;
       }
-      document.getElementById("startbutton").innerHTML = "Start";
+     // document.getElementById("startbutton").innerHTML = "Start";
       paused = true;
     }
   }

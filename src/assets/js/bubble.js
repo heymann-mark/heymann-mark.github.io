@@ -38,12 +38,12 @@ async function bubbleSort(){
   }
 }
   if(sorted === 1){
-
+    document.getElementById("startbutton").disabled = true;
     //sorted = 1;
     isRunning = false;
-    if(current===unsortedArray.length){console.log("sorted equals 6")
-      resetbubble()
-     // clearInterval(interval)
+    if(current===unsortedArray.length){
+      //resetbubble()
+      clearInterval(interval)
     }else{
       squares[current].style.backgroundColor = '#41FF00'
       current++
@@ -70,8 +70,8 @@ function bubbledraw(){
   })
 }
 function resetbubble(){
-  document.getElementById("startbutton").disabled = true;
 
+  paused = false;
   sorted=0
   current = 0;
   end = unsortedArray.length - 1;
@@ -80,4 +80,5 @@ function resetbubble(){
   isRunning = false
   swaps = 0
   clearInterval(interval)
+  sortSetup(0);
 }

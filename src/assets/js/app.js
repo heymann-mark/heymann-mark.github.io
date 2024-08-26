@@ -6,15 +6,16 @@ interval = null;
 var quantity = 100;
 
 async function chooseMethod(method) {
- delaySliderChange(document.getElementById("delayRange").value)
+  method = method;
+
+  console.log("first entering choose method with method: "+method);
   clearInterval(interval);
   if (method < 3) {
-    location.href = './sort';
+    //location.href = './sort';
   }
   if (method === 0) {
     resetbubble();
     bubbledraw();
-    document.getElementById("startbutton").disabled = false;
   }
   if (method === 1) {
     resetquick();
@@ -32,34 +33,8 @@ async function chooseMethod(method) {
   }
 }
 sortSetup(0);
-searchSetup(3);
-/*
-async function start(){
-  console.log("pushed start button"+method + isRunning);
-  speed = 1010-document.getElementById("delayRange").value
- if(isRunning === 0){
-   if(method===0){console.log("method is zero:");
-     isRunning = 1
-     resetOn = 0
-     interval = setInterval("bubbleSort()",speed)
-  }
-   if(method===1){
-     isRunning = 1
-     resetOn = 0
-     await quickSort(0,arraylength-1);
-     isRunning = 0
-     await finishedquickDraw();
-   }
-   if(method===2){
-     isRunning = 1
-     resetOn = 0
-     await mergeSort(l,arraylength - 1)
-     isRunning = 0
-     await finishedmergeDraw()
-   }
- }
-}
- */
+//searchSetup(3);
+
 async function sleep(ms){
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -67,6 +42,31 @@ async function sleep(ms){
   //chooseMethod(method)
 //}
 
+function reset() {
+/*
+Here I should
+*/
+
+
+
+  console.log("method in reset: "+method);
+  if(method == 0)resetbubble();
+  if(method == 1)resetquick();
+  if(method == 2)resetMerge();
+  document.getElementById("startbutton").disabled = false;
+  document.getElementById("startbutton").innerHTML = "Start";
+      /*
+  arrayAccess = 0;
+  document.getElementById("quantityRange").disabled = false;
+  document.getElementById("startbutton").disabled = false;
+  //document.getElementById("startbutton").innerHTML = "Start";
+  ///document.getElementById("startbutton").disabled = "false";
+  paused = false;
+  sortSetup(method);
+  current = 0;
+  resetbubble();
+  */
+}
 
 
 
