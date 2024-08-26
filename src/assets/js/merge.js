@@ -91,6 +91,8 @@ function resetmerge(){
   resetOn = 1
   isRunning = false;
   swaps=0
+  sortSetup();
+  mergedraw();
 }
 var fm = 0;
 async function finishedmergeDraw(){

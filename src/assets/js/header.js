@@ -45,9 +45,7 @@ async function start() {console.log("make it start again"+method)
       await finishedmergeDraw();
     }
   }else{
-    //if running and the start button is pressed, we pause
-    if (paused) {//unpause
-      //take care of label on button
+    if (paused) {
       document.getElementById("startbutton").innerHTML = "Pause";
       if (method === 0)
          interval = setInterval("bubbleSort()", speed);
@@ -83,8 +81,8 @@ function reset() {
 
     console.log("method in reset: "+method);
     if(method == 0)resetbubble();
-    if(method == 1){resetquick();}
-    if(method == 2)resetMerge();
+    if(method == 1)resetquick();
+    if(method == 2)resetmerge();
     document.getElementById("startbutton").disabled = false;
     document.getElementById("startbutton").innerHTML = "Start";
     document.getElementById("quantityRange").disabled = false;

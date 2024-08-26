@@ -1,3 +1,9 @@
+/*
+* TODO:
+Fix the pause feature
+
+
+*/
 function resetquick() {
   document.getElementById("startbutton").disabled = false;
   clearInterval(interval);
@@ -83,6 +89,8 @@ async function quickdraw() {
   });
 }
 async function pauseQuick(){
+
+  console.log("quick paused: "+paused)
   while(paused){
 
   }
