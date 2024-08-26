@@ -12,7 +12,7 @@ async function chooseMethod(m) {
   console.log("first entering choose method with method: "+method);
   clearInterval(interval);
   if (method < 3) {
-    //location.href = './sort';
+    location.href = './sort';//for when you are coming from the search header
   }
   if (method === 0) {
     resetbubble();

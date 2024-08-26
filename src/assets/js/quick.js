@@ -22,11 +22,10 @@ async function quickSort(begin, end) {
   }
   if (begin < end) {
     arrayAccess++;
-    document.getElementById('arrayAccessVal').innerHTML = arrayAccess;
+    document.getElementById("arrayAccessVal").innerHTML = arrayAccess;
     await partition(begin, end);
     await quickSort(begin, partitionIndex - 1);
     await quickSort(partitionIndex + 1, end);
-
   }
 }
 
@@ -37,7 +36,7 @@ async function partition(p1, p2) {
   for (j = p1; j < p2; j++) {
     if (resetOn === 1) return;
     if (unsortedArray[j] <= pivot) {
-      speed = 1010 - document.getElementById("delayRange").value*10;
+      speed = 1010 - document.getElementById("delayRange").value * 10;
       console.log("partition2: " + speed);
       await sleep(speed);
       i++;
@@ -65,9 +64,9 @@ async function swap(arr, a, b) {
 }
 
 async function quickdraw() {
-  //console.log("quickdraw  " + speed);
   htmlElements = "Quick Sort &nbsp &nbsp";
-  document.getElementById("sort-label").innerHTML = htmlElements;
+  if (document.getElementById("sort-label") != null)
+    document.getElementById("sort-label").innerHTML = htmlElements;
   if (resetOn === 1 && isRunning) return;
   var j = 1;
   dividers.forEach((index) => {
@@ -88,12 +87,9 @@ async function quickdraw() {
     i++;
   });
 }
-async function pauseQuick(){
-
-  console.log("quick paused: "+paused)
-  while(paused){
-
-  }
+async function pauseQuick() {
+  console.log("quick paused: " + paused);
+  while (paused) {}
 }
 async function finishedquickDraw() {
   document.getElementById("startbutton").disabled = true;
@@ -102,7 +98,7 @@ async function finishedquickDraw() {
     if (resetOn === 0 && !isRunning)
       squares[index].style.backgroundColor = "#41FF00";
     index++;
-    console.log("finishedquickDraw"+speed);
+    console.log("finishedquickDraw" + speed);
     await sleep(10);
   }
 }
