@@ -55,6 +55,7 @@ Here I should
   if(method == 2)resetMerge();
   document.getElementById("startbutton").disabled = false;
   document.getElementById("startbutton").innerHTML = "Start";
+  document.getElementById("quantityRange").disabled = false;
       /*
   arrayAccess = 0;
   document.getElementById("quantityRange").disabled = false;
