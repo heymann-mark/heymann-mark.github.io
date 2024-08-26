@@ -1,12 +1,13 @@
 
 var paused = false;
 function delaySliderChange(val) {
+  console.log("speed: "+val);
   document.getElementById("delayRange").innerHTML = val + "&nbsp";
   speed = val;
   if(isRunning){
     if (method === 0){
       clearInterval(interval);
-      interval = setInterval("bubbleSort()", 1000 - val);
+      interval = setInterval("bubbleSort()", 1000 - val*10);
     }
   }
 }
