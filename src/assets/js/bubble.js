@@ -83,4 +83,5 @@ function resetbubble(){
   swaps = 0
   clearInterval(interval)
   sortSetup();
+  bubbledraw()
 }

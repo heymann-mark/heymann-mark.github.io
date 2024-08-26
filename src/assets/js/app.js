@@ -35,14 +35,10 @@ async function chooseMethod(m) {
 }
 sortSetup();
 bubbledraw();
-//searchSetup(3);
 
 async function sleep(ms){
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-//function reset(){
-  //chooseMethod(method)
-//}
 
 
 
