@@ -9,7 +9,6 @@ var partitionIndex = arraylength - 1;
 var speed = 0;
 var sorted = 0;
 //set is running
-//var htmlElements = "";
 var begin = 0;
 var squares;
 var dividers;

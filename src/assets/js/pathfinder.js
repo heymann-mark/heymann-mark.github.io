@@ -1,7 +1,6 @@
 var unvisited = [];
 cellsize = 16;
-function searchSetup(searchmethod) {
-  console.log("You are in search setup with method:"+ method);
+function searchSetup() {
   isStartChosen = 0;
   isStopChosen = 0;
   clearInterval(interval);
@@ -15,14 +14,20 @@ function searchSetup(searchmethod) {
   visited = new Map();
   unvisited.length = columns * rows;
   htmlElements = "";
-  if (searchmethod === 3)
-    htmlElements +=
-      '<div id="searchdisplay" style = "background-color:red;color:white;display:flex;margin-top:55px;">djikstra\'s algorithm';
-  if (searchmethod === 4)
-    htmlElements +=
-      '<div id="searchdisplay" style = "background-color:red;color:white;">&nbsp &nbsp A* Algorithm &nbsp &nbsp';
+  htmlElements +=
+    '<div id="searchdisplay" ' +
+    "style = " +
+    '"background-color:red;' +
+    "color:white;" +
+    "display:flex;" +
+    "margin-top:55px;" +
+    '">';
+  htmlElements +=
+    '<label id="search-label" class="form-label" style = "background-color:red; "> </label>';
+
   htmlElements += "<output id=instructions></output>";
   htmlElements += "</div>"; //close searchdisplay
+
   htmlElements +=
     '<div id = "grid" ' +
     'style = "' +
@@ -62,9 +67,11 @@ function searchSetup(searchmethod) {
   }
   htmlElements += "</div>"; //closing grid
   if (document.getElementById("search-container") != null) {
+    console.log("container is not null");
     container = document.getElementById("search-container");
     container.innerHTML = htmlElements;
   }
+
   boxes = Array.from(document.querySelectorAll(".box"));
   var unvisitedlength = unvisited.length;
   for (i = 0; i < unvisitedlength; i++) {

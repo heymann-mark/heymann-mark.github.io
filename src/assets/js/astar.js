@@ -153,5 +153,8 @@ function astarReset(){
   resetOn=0
 if(!pq.isEmpty())
   resetOn = 1
+htmlElements = "";
+htmlElements += 'A* Algorithm &nbsp &nbsp'
+  document.getElementById("search-label").innerHTML = htmlElements;
 
 }

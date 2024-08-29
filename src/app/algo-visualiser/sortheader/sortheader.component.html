@@ -67,9 +67,9 @@ color-on-scroll="400"
           Sort
         </button>
         <div ngbDropdownMenu>
-          <a class="dropdown-item" onclick="chooseMethod(0)">Bubble</a>
-          <a class="dropdown-item" onclick="chooseMethod(1)">Quick</a>
-          <a class="dropdown-item" onclick="chooseMethod(2)">Merge</a>
+          <a class="dropdown-item" onclick="resetbubble()">Bubble</a>
+          <a class="dropdown-item" onclick="resetquick()">Quick</a>
+          <a class="dropdown-item" onclick="resetmerge()">Merge</a>
         </div>
       </div>
     </li>
@@ -80,8 +80,8 @@ color-on-scroll="400"
           Search
         </button>
         <div ngbDropdownMenu>
-          <a class="dropdown-item"  onclick="chooseMethod(3)" >djiksrav1</a>
-          <a class="dropdown-item" onclick="chooseMethod(4)">A*</a>
+          <a class="dropdown-item"  onclick="dijkstraReset()" >djiksrav1</a>
+          <a class="dropdown-item" onclick="astarReset()">A*</a>
         </div>
       </div>
     </li>

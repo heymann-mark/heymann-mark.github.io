@@ -5,7 +5,7 @@ Fix the pause feature
 
 */
 function resetquick() {
-  document.getElementById("startbutton").disabled = false;
+  method = 1;
   clearInterval(interval);
   if (isRunning) resetOn = 1;
   isRunning = false;
@@ -14,6 +14,7 @@ function resetquick() {
   swaps = -1;
   sortSetup();
   quickdraw();
+  document.getElementById("startbutton").disabled = false;
 }
 
 async function quickSort(begin, end) {
@@ -92,7 +93,6 @@ async function pauseQuick() {
   while (paused) {}
 }
 async function finishedquickDraw() {
-  document.getElementById("startbutton").disabled = true;
   var index = 0;
   while (index < unsortedArray.length) {
     if (resetOn === 0 && !isRunning)

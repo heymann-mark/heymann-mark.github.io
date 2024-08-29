@@ -140,8 +140,12 @@ async function djikstrasAlgorithm(src,dest){
   return path;
 }
 
-function dijkstraReset(){
+function dijkstraReset(){ //clearInterval(interval);
   resetOn=0
 if(!pq.isEmpty())
   resetOn = 1
+htmlElements = "";
+htmlElements += 'dijkstra Algorithm &nbsp &nbsp'
+if(document.getElementById("search-label")!= null)
+  document.getElementById("search-label").innerHTML = htmlElements;
 }

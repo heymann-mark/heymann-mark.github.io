@@ -65,7 +65,8 @@ function bubbledraw() {
   });
 }
 function resetbubble() {
-  paused = false;
+  document.getElementById("startbutton").disabled = false;
+  method = 0;
   sorted = 0;
   current = 0;
   end = unsortedArray.length - 1;
