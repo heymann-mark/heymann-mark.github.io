@@ -51,8 +51,12 @@ function sortSetup() {
     htmlElements += '<div class="line"> </div>';
     htmlElements += '<div class="bline"> </div>';
   }
-  if (document.getElementById("sort-container") != null)
-    document.getElementById("sort-container").innerHTML = htmlElements;
+  if (document.getElementById("bubblesort-container") != null)
+    document.getElementById("bubblesort-container").innerHTML = htmlElements;
+  if (document.getElementById("quicksort-container") != null)
+    document.getElementById("quicksort-container").innerHTML = htmlElements;
+  if(document.getElementById("mergesort-container") != null)
+    document.getElementById("mergesort-container").innerHTML = htmlElements;
   squares = Array.from(document.querySelectorAll(".line"));
   dividers = Array.from(document.querySelectorAll(".bline"));
 
@@ -60,5 +64,5 @@ function sortSetup() {
   for (n = 0; n < arraylength; n++) {
     unsortedArray[n] = Math.floor(Math.random() * 100);
   }
-  //bubbledraw()
+
 }

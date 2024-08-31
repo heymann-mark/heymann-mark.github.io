@@ -40,21 +40,6 @@ color-on-scroll="400"
       </div>
     </li>
 
-
-     <!-- <div class="cellsize-container" id="cells">
-        <label class="slider-label"style = "color: red;">cellsize: </label>
-        <input
-          type=" text"
-          id="cellsize"
-          name="cSize"
-          size="3"
-          maxlength="3"
-          style="height: 50%"
-          oninput="cellsize = this.value"
-          [(ngModel)]="cellsize"
-        />
-      </div>-->
-
     <li class="nav-item">
       <button
         id="randomizebutton"
@@ -75,16 +60,6 @@ color-on-scroll="400"
         Customize
       </button>
     </li>
-    <li class="nav-item">
-      <button
-        id="startbutton"
-        type="button"
-        class="btn btn-primary"
-        onclick="start()"
-      >
-        Start
-      </button>
-    </li>
 
     <li class="nav-item">
       <button
@@ -103,9 +78,9 @@ color-on-scroll="400"
           Sort
         </button>
         <div ngbDropdownMenu>
-          <a class="dropdown-item" onclick="chooseMethod(0)">Bubble</a>
-          <a class="dropdown-item" onclick="chooseMethod(1)">Quick</a>
-          <a class="dropdown-item" onclick="chooseMethod(2)">Merge</a>
+          <a class="dropdown-item"  [routerLink]="['/bubblesort']">Bubble</a>
+          <a class="dropdown-item"  [routerLink]="['/quicksort']" >Quick</a>
+          <a class="dropdown-item"  [routerLink]="['/mergesort']">Merge</a>
         </div>
       </div>
     </li>
@@ -116,8 +91,8 @@ color-on-scroll="400"
           Search
         </button>
         <div ngbDropdownMenu>
-          <a class="dropdown-item" onclick="chooseMethod(3)">djiksrav1</a>
-          <a class="dropdown-item" onclick="chooseMethod(4)">A*</a>
+          <a class="dropdown-item"  [routerLink]="['/dijkstra']" >djiksrav1</a>
+          <a class="dropdown-item"  [routerLink]="['/astar']">A*</a>
         </div>
       </div>
     </li>

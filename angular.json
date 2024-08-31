@@ -44,12 +44,10 @@
               "src/assets/js/astar.js",
               "src/assets/js/merge.js",
               "src/assets/js/bubble.js",
-              "src/assets/js/pathfinder.js",
+              "src/assets/js/searchSetup.js",
               "src/assets/js/header.js",
               "src/assets/js/sortSetup.js",
               "src/assets/js/app.js"
-
-
             ],
             "server": "src/main.server.ts",
             "prerender": true,

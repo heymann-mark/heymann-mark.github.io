@@ -10,8 +10,6 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './sortheader.component.css'
 })
 export class SortheaderComponent {
-
-
 @Input() speed = 1;
 @Input() quantity = 100;
 @Input() cellsize = 14;

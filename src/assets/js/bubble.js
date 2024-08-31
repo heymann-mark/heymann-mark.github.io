@@ -64,8 +64,9 @@ function bubbledraw() {
     j++;
   });
 }
-function resetbubble() {
-  document.getElementById("startbutton").disabled = false;
+function resetbubble(i) {
+  if (document.getElementById("startbutton") != null)
+    document.getElementById("startbutton").disabled = false;
   method = 0;
   sorted = 0;
   current = 0;

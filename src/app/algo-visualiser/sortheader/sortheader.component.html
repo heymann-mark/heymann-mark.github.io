@@ -67,9 +67,9 @@ color-on-scroll="400"
           Sort
         </button>
         <div ngbDropdownMenu>
-          <a class="dropdown-item" onclick="resetbubble()">Bubble</a>
-          <a class="dropdown-item" onclick="resetquick()">Quick</a>
-          <a class="dropdown-item" onclick="resetmerge()">Merge</a>
+          <a class="dropdown-item"  [routerLink]="['/bubblesort']">Bubble</a>
+          <a class="dropdown-item"  [routerLink]="['/quicksort']" >Quick</a>
+          <a class="dropdown-item"  [routerLink]="['/mergesort']">Merge</a>
         </div>
       </div>
     </li>
@@ -80,8 +80,8 @@ color-on-scroll="400"
           Search
         </button>
         <div ngbDropdownMenu>
-          <a class="dropdown-item"  onclick="dijkstraReset()" >djiksrav1</a>
-          <a class="dropdown-item" onclick="astarReset()">A*</a>
+          <a class="dropdown-item"  [routerLink]="['/dijkstra']" >djiksrav1</a>
+          <a class="dropdown-item"  [routerLink]="['/astar']">A*</a>
         </div>
       </div>
     </li>
@@ -107,7 +107,7 @@ color-on-scroll="400"
           <a class="dropdown-item" href="./photography">Photography</a>
           <a
             class="dropdown-item"
-            href="./sort"
+            href="./bubblesort"
             aria-disabled="true"
             >Algo Visualizer</a
           >

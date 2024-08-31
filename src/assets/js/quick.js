@@ -14,6 +14,7 @@ function resetquick() {
   swaps = -1;
   sortSetup();
   quickdraw();
+  if(document.getElementById("startbutton")!=null)
   document.getElementById("startbutton").disabled = false;
 }
 

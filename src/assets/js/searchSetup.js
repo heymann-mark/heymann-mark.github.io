@@ -66,12 +66,15 @@ function searchSetup() {
       "</div>";
   }
   htmlElements += "</div>"; //closing grid
-  if (document.getElementById("search-container") != null) {
+  if (document.getElementById("dijkstra-container") != null) {
     console.log("container is not null");
-    container = document.getElementById("search-container");
+    container = document.getElementById("dijkstra-container");
+    container.innerHTML = htmlElements;
+  } else if (document.getElementById("astar-container") != null) {
+    console.log("container is not null");
+    container = document.getElementById("astar-container");
     container.innerHTML = htmlElements;
   }
-
   boxes = Array.from(document.querySelectorAll(".box"));
   var unvisitedlength = unvisited.length;
   for (i = 0; i < unvisitedlength; i++) {
@@ -167,7 +170,7 @@ function draw(i) {
         boxes[i].style.backgroundColor = "red";
         stop = i;
         document.getElementById("instructions").innerHTML = " ";
-        if (method === 3) djikstra(beginning, stop);
+        if (method === 3) dijkstra(beginning, stop);
         if (method === 4) astar(beginning, stop);
       }
     } else {

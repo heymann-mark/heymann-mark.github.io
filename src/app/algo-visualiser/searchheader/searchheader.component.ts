@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-searchheader',
   standalone: true,
-  imports: [FormsModule, NgbDropdownModule],
+  imports: [FormsModule, NgbDropdownModule, RouterModule],
   templateUrl: './searchheader.component.html',
   styleUrl: './searchheader.component.css'
 })

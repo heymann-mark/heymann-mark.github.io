@@ -49,5 +49,6 @@ function reset() {
   if (method == 0) resetbubble();
   if (method == 1) resetquick();
   if (method == 2) resetmerge();
-  document.getElementById("quantityRange").disabled = false;
+  if (document.getElementById("quantityRange") != null)
+    document.getElementById("quantityRange").disabled = false;
 }
