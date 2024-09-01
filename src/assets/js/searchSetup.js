@@ -170,8 +170,8 @@ function draw(i) {
         boxes[i].style.backgroundColor = "red";
         stop = i;
         document.getElementById("instructions").innerHTML = " ";
-        if (method === 3) dijkstra(beginning, stop);
-        if (method === 4) astar(beginning, stop);
+        if (window.location.toString().includes("dijkstra")) dijkstra(beginning, stop);
+        if (window.location.toString().includes("astar")) astar(beginning, stop);
       }
     } else {
       visited.set(i, 1);

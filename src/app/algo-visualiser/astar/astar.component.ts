@@ -1,12 +1,12 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {SearchheaderComponent} from '../searchheader/searchheader.component';
+import {searchHeaderComponent} from '../searchHeader/searchHeader.component';
 
 declare function astarReset(num:number):any;
 
 @Component({
   selector: 'app-astar',
   standalone: true,
-  imports: [SearchheaderComponent],
+  imports: [searchHeaderComponent],
   templateUrl: './astar.component.html',
   styleUrl: './astar.component.css'
 })

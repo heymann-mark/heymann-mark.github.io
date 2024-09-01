@@ -5,7 +5,6 @@ Fix the pause feature
 
 */
 function resetquick() {
-  method = 1;
   clearInterval(interval);
   if (isRunning) resetOn = 1;
   isRunning = false;

@@ -3,14 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
-  selector: 'app-sortheader',
+  selector: 'app-sortHeader',
   standalone: true,
   imports: [FormsModule,NgbDropdownModule,RouterModule],
-  templateUrl: './sortheader.component.html',
-  styleUrl: './sortheader.component.css'
+  templateUrl: './sortHeader.component.html',
+  styleUrl: './sortHeader.component.css'
 })
-export class SortheaderComponent {
-@Input() speed = 1;
+export class sortHeaderComponent {
+@Input() speed = 100;
 @Input() quantity = 100;
-@Input() cellsize = 14;
 }

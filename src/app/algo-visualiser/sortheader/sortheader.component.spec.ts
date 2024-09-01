@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SortheaderComponent } from './sortheader.component';
+import { sortHeaderComponent } from './sortHeader.component';
 
-describe('SortheaderComponent', () => {
-  let component: SortheaderComponent;
-  let fixture: ComponentFixture<SortheaderComponent>;
+describe('sortHeaderComponent', () => {
+  let component: sortHeaderComponent;
+  let fixture: ComponentFixture<sortHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SortheaderComponent]
+      imports: [sortHeaderComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SortheaderComponent);
+    fixture = TestBed.createComponent(sortHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

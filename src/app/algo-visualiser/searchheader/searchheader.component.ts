@@ -4,13 +4,13 @@ import { RouterModule } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-searchheader',
+  selector: 'app-searchHeader',
   standalone: true,
   imports: [FormsModule, NgbDropdownModule, RouterModule],
-  templateUrl: './searchheader.component.html',
-  styleUrl: './searchheader.component.css'
+  templateUrl: './searchHeader.component.html',
+  styleUrl: './searchHeader.component.css'
 })
-export class SearchheaderComponent {
+export class searchHeaderComponent {
   @Input() speed = 500;
   @Input() quantity = 100;
   @Input() cellsize = 14;

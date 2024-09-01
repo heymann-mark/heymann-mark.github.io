@@ -86,7 +86,6 @@ function resetmerge() {
    if(document.getElementById("startbutton")!=null)
      document.getElementById("startbutton").disabled = false;
   clearInterval(interval);
-  method = 2;
   resetOn = 1;
   isRunning = false;
   swaps = 0;

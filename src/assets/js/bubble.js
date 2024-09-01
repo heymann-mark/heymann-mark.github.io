@@ -45,6 +45,11 @@ async function bubbleSort() {
 }
 
 function bubbledraw() {
+  console.log("squares2: " + arraylength);
+  console.log("squares2: " + squares.length);
+  console.log("squares2: " + unsortedArray.length);
+  console.log("unsortedArray: " + unsortedArray);
+
   htmlElements = "Bubble Sort &nbsp &nbsp";
   if (document.getElementById("sort-label") != null)
     document.getElementById("sort-label").innerHTML = htmlElements;
@@ -64,7 +69,11 @@ function bubbledraw() {
     j++;
   });
 }
-function resetbubble(i) {
+function resetbubble() {
+  console.log(
+    "inside resetbubble: " +
+      document.getElementById("quantityRange").value
+  );
   if (document.getElementById("startbutton") != null)
     document.getElementById("startbutton").disabled = false;
   method = 0;
