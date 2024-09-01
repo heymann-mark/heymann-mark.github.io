@@ -150,7 +150,8 @@ async function dijkstrasAlgorithm(src, dest) {
   return path;
 }
 
-function dijkstraReset(i) {
+function dijkstraReset() {
+  randomized = 0;
   clearInterval(interval);
   searchSetup();
   resetOn = 0;

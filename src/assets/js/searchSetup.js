@@ -86,15 +86,7 @@ function searchSetup() {
   draw(-1);
 }
 
-function randomize() {
-  unvisited.forEach((element) => {
-    var random = Math.floor(Math.random() * 5);
-    if (random % 5 === 0) {
-      visited.set(element, 1);
-      boxes[element].style.backgroundColor = "black";
-    }
-  });
-}
+
 
 function customize() {
   if (customizing === 0) {

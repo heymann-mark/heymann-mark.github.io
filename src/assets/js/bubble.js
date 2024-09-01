@@ -1,7 +1,7 @@
 var current = 0;
 var swaps = 0;
 var switched = 1;
-var f = 0;
+//var f = 0;
 var arrayAccess = 0;
 async function bubbleSort() {
   if (resetOn === 1) return;

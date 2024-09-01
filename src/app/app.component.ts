@@ -16,6 +16,6 @@ export class AppComponent {
 
   }
   ngAfterViewInit(){
-    sortSetup();//loads faster with this here
+    //sortSetup();//loads faster with this here
   }
 }

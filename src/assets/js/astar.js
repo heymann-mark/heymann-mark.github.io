@@ -177,6 +177,7 @@ function euclidean(src, dest) {
   );
 }
 function astarReset(i) {
+  randomized = 0;
   clearInterval(interval);
   searchSetup();
   previousVertex = new Map();
