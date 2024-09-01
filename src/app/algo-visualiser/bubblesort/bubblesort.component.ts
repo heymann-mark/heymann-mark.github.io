@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 declare function resetbubble(): void;
 declare function sortSetup(): void;
+declare function reset(): void;
 
 @Component({
   selector: 'app-bubblesort',
@@ -14,12 +15,6 @@ declare function sortSetup(): void;
 })
 export class BubblesortComponent implements AfterViewInit {
   @Input() quantity = 100;
-  constructor(){
-  //  sortSetup();
-  }
-  ngOnInit(){
-    //sortSetup();
-  }
   ngAfterViewInit(): void {
     resetbubble();
   }

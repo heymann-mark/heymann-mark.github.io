@@ -83,8 +83,6 @@ async function mergedraw() {
   });
 }
 function resetmerge() {
-   if(document.getElementById("startbutton")!=null)
-     document.getElementById("startbutton").disabled = false;
   clearInterval(interval);
   resetOn = 1;
   isRunning = false;

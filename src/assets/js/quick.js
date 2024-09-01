@@ -4,6 +4,8 @@ Fix the pause feature
 
 
 */
+var s1 = 0;
+var s2 = 0;
 function resetquick() {
   clearInterval(interval);
   if (isRunning) resetOn = 1;
@@ -13,8 +15,6 @@ function resetquick() {
   swaps = -1;
   sortSetup();
   quickdraw();
-  if(document.getElementById("startbutton")!=null)
-  document.getElementById("startbutton").disabled = false;
 }
 
 async function quickSort(begin, end) {
@@ -38,7 +38,6 @@ async function partition(p1, p2) {
     if (resetOn === 1) return;
     if (unsortedArray[j] <= pivot) {
       speed = 1010 - document.getElementById("delayRange").value * 10;
-      console.log("partition2: " + speed);
       await sleep(speed);
       i++;
       switched = 1;
@@ -89,7 +88,6 @@ async function quickdraw() {
   });
 }
 async function pauseQuick() {
-  console.log("quick paused: " + paused);
   while (paused) {}
 }
 async function finishedquickDraw() {
@@ -98,7 +96,6 @@ async function finishedquickDraw() {
     if (resetOn === 0 && !isRunning)
       squares[index].style.backgroundColor = "#41FF00";
     index++;
-    console.log("finishedquickDraw" + speed);
     await sleep(10);
   }
 }

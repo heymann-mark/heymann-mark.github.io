@@ -9,8 +9,10 @@ function delaySliderChange(val) {
   }
 }
 function quantitySliderChange(val) {
-  console.log("inside quantitySliderValueChange: " + val);
+  console.log("qunatity slider: "+ val)
   quantity = val;
+  arraylength = val;
+  unsortedArray.length = val;
   reset();
 }
 
@@ -58,4 +60,6 @@ function reset() {
   }
   if (document.getElementById("quantityRange") != null)
     document.getElementById("quantityRange").disabled = false;
+  if (document.getElementById("startbutton") != null)
+    document.getElementById("startbutton").disabled = false;
 }

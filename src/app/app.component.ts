@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+declare function sortSetup(): any;
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'heymann-mark.github.io';
+  constructor(){
 
+  }
+  ngAfterViewInit(){
+    sortSetup();//loads faster with this here
+  }
 }

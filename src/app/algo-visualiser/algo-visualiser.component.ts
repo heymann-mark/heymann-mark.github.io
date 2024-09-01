@@ -7,6 +7,7 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {CdkDrag} from '@angular/cdk/drag-drop';
 declare function sortSetup(): any;
+declare function reset(): void;
 @Component({
   selector: 'app-algo-visualiser',
   standalone: true,
@@ -15,8 +16,6 @@ declare function sortSetup(): any;
   templateUrl: './algo-visualiser.component.html',
   styleUrl: './algo-visualiser.component.css'
 })
-export class AlgoVisualiserComponent  implements AfterViewInit{
-  ngAfterViewInit(){
-//sortSetup();
-  }
+export class AlgoVisualiserComponent  {
+
 }

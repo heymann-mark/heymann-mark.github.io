@@ -67,11 +67,9 @@ function searchSetup() {
   }
   htmlElements += "</div>"; //closing grid
   if (document.getElementById("dijkstra-container") != null) {
-    console.log("container is not null");
     container = document.getElementById("dijkstra-container");
     container.innerHTML = htmlElements;
   } else if (document.getElementById("astar-container") != null) {
-    console.log("container is not null");
     container = document.getElementById("astar-container");
     container.innerHTML = htmlElements;
   }
