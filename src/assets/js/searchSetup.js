@@ -107,8 +107,9 @@ function customize() {
         visited.set(p, 1);
       }
     }
+
     var mousePosition, holding;
-    function myInterval() {
+    function myInterval() {console.log("holding: "+ holding)
       var setIntervalId = setInterval(function () {
         if (!holding) {
           clearInterval(setIntervalId);
@@ -139,6 +140,7 @@ function customize() {
       "&nbsp Click Square to choose start";
     customizing = 0;
   }
+
 }
 
 function draw(i) {
