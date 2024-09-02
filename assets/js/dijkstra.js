@@ -151,6 +151,7 @@ async function dijkstrasAlgorithm(src, dest) {
 }
 
 function dijkstraReset() {
+  randomized = 0;
   clearInterval(interval);
   searchSetup();
   resetOn = 0;

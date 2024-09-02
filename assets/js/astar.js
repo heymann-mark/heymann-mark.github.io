@@ -1,4 +1,4 @@
-//var pq = new PriorityQueue();
+var pq = new PriorityQueue();
 var previousVertex;
 var dist;
 var weightmaps;
@@ -177,6 +177,7 @@ function euclidean(src, dest) {
   );
 }
 function astarReset(i) {
+  randomized = 0;
   clearInterval(interval);
   searchSetup();
   previousVertex = new Map();

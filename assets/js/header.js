@@ -1,15 +1,16 @@
 function delaySliderChange(val) {
   document.getElementById("delayRange").innerHTML = val + "&nbsp";
   speed = val;
+  console.log("delayRange: " + val);
   if (isRunning) {
     if (window.location.toString().includes("bubblesort")) {
       clearInterval(interval);
-      interval = setInterval("bubbleSort()", 1000 - val * 10);
+      interval = setInterval("bubbleSort()", 100 - val);
     }
   }
 }
 function quantitySliderChange(val) {
-  console.log("qunatity slider: " + val);
+
   quantity = val;
   arraylength = val;
   unsortedArray.length = val;
@@ -18,7 +19,8 @@ function quantitySliderChange(val) {
 
 async function start() {
   document.getElementById("startbutton").disabled = true;
-  speed = 1010 - document.getElementById("delayRange").value * 10; //this line works
+  speed = 1000 - document.getElementById("delayRange").value * 10; //this line works
+  console.log("speed in the start() function: " + speed);
   if (!isRunning) {
     document.getElementById("quantityRange").disabled = true;
     if (window.location.toString().includes("bubblesort")) {
@@ -64,4 +66,17 @@ function reset() {
     document.getElementById("quantityRange").disabled = false;
   if (document.getElementById("startbutton") != null)
     document.getElementById("startbutton").disabled = false;
+}
+var randomized = 0;
+function randomize() {
+  if (randomized == 0) {
+    unvisited.forEach((element) => {
+      var random = Math.floor(Math.random() * 5);
+      if (random % 5 === 0) {
+        visited.set(element, 1);
+        boxes[element].style.backgroundColor = "black";
+      }
+    });
+    randomized = 1;
+  }
 }
