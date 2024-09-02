@@ -11,9 +11,9 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './searchHeader.component.css'
 })
 export class searchHeaderComponent {
-  @Input() speed = 500;
+  @Input() speed = 1000;
   @Input() quantity = 100;
-  @Input() cellsize = 14;
+  @Input() cellsize = 30;
 
   cellsizeSliderChange(val:number){
     console.log("here we are changing the cell size"+val);

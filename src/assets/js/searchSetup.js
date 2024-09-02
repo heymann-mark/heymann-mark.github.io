@@ -1,5 +1,5 @@
 var unvisited = [];
-cellsize = 16;
+cellsize = 30;
 function searchSetup() {
   isStartChosen = 0;
   isStopChosen = 0;
