@@ -47,6 +47,7 @@ async function astarAlgorithm(src, dest) {
           dist.set(v, dist.get(u) + weight);
           previousVertex.set(v, u);
           pq.enqueue(v, dist.get(u) + weight + h(v, dest));
+          boxes[v].style.backgroundColor = "blue";
         }
       }
       v = u - 1; //left
